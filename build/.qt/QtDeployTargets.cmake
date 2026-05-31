@@ -1,0 +1,3 @@
+set(__QT_DEPLOY_TARGET_Sequences_FILE C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/libSequences.dll)
+set(__QT_DEPLOY_TARGET_Sequences_TYPE SHARED_LIBRARY)
+set(__QT_DEPLOY_TARGET_Sequences_RUNTIME_DLLS )
