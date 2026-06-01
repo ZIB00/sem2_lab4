@@ -9,16 +9,20 @@
 #include "../../Sequences/sequences/PriorityQueue.hpp"
 #include "../../Sequences/other/Option.hpp"
 
-enum Operations {
-        Insert,
-        Remove
+enum Action {
+        INSERT,
+        REMOVE
 };
 
 template<class T>
 struct Change {
         size_t targetIndex;
         T value;
-        Operations operation;
+        Action action;
+
+        bool operator<(const Change<T>& other) const {
+                return this->targetIndex < other.targetIndex;
+        }
 };
 
 class Cardinal {
@@ -50,21 +54,24 @@ class LazySequence : public Sequence<T>
                 PriorityQueue<Change<T>, std::greater<T>> queue;
 
                 public:
-                Generator( LazySequence<T>* list, std::function<T(Sequence<T>*)> func ) : parent(list), rule(func), currentIndex(0), queue(new PriorityQueue<T>) {} 
+                Generator( LazySequence<T>* list, std::function<T(Sequence<T>*)> func ) 
+                        : parent(list), rule(func), currentIndex(0), queue(new PriorityQueue<T>) {} 
                 Generator( LazySequence<T>* list, const Generator& gen, const Change<T>& change );
-                Generator( LazySequence<T>* list, const Generator& other ) : parent(list), rule(other.rule) {}
+                Generator( LazySequence<T>* list, const Generator& other ) 
+                        : parent(list), rule(other.rule) {}
                 ~Generator() { if(parent) delete parent; }
 
                 T GetNext();
                 bool HasNext() const;
                 Option<T> TryGetNext();
 
-                Generator* Append(T item)             const;
-                Generator* Append(Sequence<T>* items) const;
-                Generator* Insert(T item)             const;
-                Generator* Insert(Sequence<T>* items) const;
-                Generator* Remove(T item)             const;
-                Generator* Remove(Sequence<T>* items) const;
+                Generator* Append( T item )             const { return new Generator( parent, *this, { currentIndex, item, Action::INSERT} ); }
+                Generator* Append( Sequence<T>* items ) const;
+                Generator* Set( size_t index, T item ) const { return new Generator( parent, *this, { index, item, Action::INSERT} ); }
+                Generator* Insert( size_t index, T item )             const { return new Generator( parent, *this, { index, item, Action::INSERT} ); }
+                Generator* Insert( size_t index, Sequence<T>* items ) const;
+                Generator* Remove( size_t index, T item)              const { return new Generator( parent, *this, { index, item, Action::REMOVE} ); }
+                Generator* Remove( size_t index, Sequence<T>* items ) const;
         };
 
         bool isInfinite;
@@ -75,19 +82,22 @@ class LazySequence : public Sequence<T>
         using value_type = T;
 
         LazySequence() : isInfinite(false), list(), generator(nullptr) {}
-        LazySequence( T* items, int count ) : isInfinite(false), list( items, static_cast<size_t>(count) ), generator(nullptr) {}
+        LazySequence( T* items, int count ) 
+                : isInfinite(false), list( items, static_cast<size_t>(count) ), generator(nullptr) {}
         LazySequence( Sequence<T>* seq )    : isInfinite(false), list(seq), generator(nullptr) {}
         //LazySequence( T(*func)(Sequence<T>*), Sequence<T>* seq ) : isInfinite(true), list(seq), generator(new Generator(this, func)) {} Зачем?
-        LazySequence( std::function<T(Sequence<T>*)> func, Sequence<T>* seq ) : isInfinite(true), list(seq), generator(nullptr) { if(func) this->generator = new Generator(this, func); }
-        LazySequence( const LazySequence<T>& list ) : isInfinite(list.isInfinite), list(list.list), generator(nullptr) { if(list.generator) this->generator = new Generator(this, *(list.generator)); }
+        LazySequence( std::function<T(Sequence<T>*)> func, Sequence<T>* seq ) 
+                : isInfinite(true), list(seq), generator(nullptr) { if(func) this->generator = new Generator(this, func); }
+        LazySequence( const LazySequence<T>& list ) 
+                : isInfinite(list.isInfinite), list(list.list), generator(nullptr) { if(list.generator) this->generator = new Generator(this, *(list.generator)); }
         ~LazySequence() { if (generator) delete generator; };
 
         T GetFirst() override;
         T GetLast() override;
         const T& Get(size_t index) override;
-        void Set( size_t index, T value) override;
+        void Set( size_t index, T value) override { generator.; }
         LazySequence<T>* GetSubsequence( size_t startIndex, size_t endIndex ) override;
-        Cardinal GetLength() override;
+        Cardinal GetLength() override { return isInfinite ? Cardinal::Infinite() : Cardinal(list.GetLength()); }
         size_t GetMaterializedCount() const; 
 
         Sequence<T>* Append(T item) override;
