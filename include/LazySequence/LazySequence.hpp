@@ -5,8 +5,8 @@
 #include <vcruntime_typeinfo.h>
 #include <memory>
 
-#include "../../Sequences/sequences/Sequence.hpp"
-#include "../../Sequences/sequences/ArraySequence.hpp"
+#include "../Sequences/sequences/Sequence.hpp"
+#include "../Sequences/sequences/ArraySequence.hpp"
 
 enum Action {
         INSERT,
@@ -38,11 +38,11 @@ class Cardinal {
     Cardinal(size_t size) : Cardinal(false, size) {}
     static Cardinal Infinite() { return Cardinal(true, 0); }
 
-    Cardinal operator+(size_t size) { 
+    Cardinal operator+(size_t size) const { 
         return isInfinite ? Cardinal::Infinite() : Cardinal(false, this->size + size); 
         }
 
-    Cardinal operator-(size_t size) { 
+    Cardinal operator-(size_t size) const { 
         if(isInfinite) return Cardinal::Infinite();
         return Cardinal(false, (this->size >= size) ? this->size - size : 0); 
         }
@@ -58,6 +58,7 @@ class IGenerator
         virtual ~IGenerator() = default;
         virtual const T& Get( size_t index ) = 0;
         virtual Cardinal GetLength() = 0;
+        virtual size_t GetMaterializedCount() const = 0;
 };
 
 template<class T>
@@ -69,6 +70,8 @@ class MainGenerator : public IGenerator<T>
         bool isInfinite;
 
         public:
+        MainGenerator( std::shared_ptr<ArraySequence<T>> list ) 
+                                : list(list), rule(nullptr), isInfinite(false) {}
         MainGenerator( std::shared_ptr<ArraySequence<T>> list, 
                         std::function<T(std::shared_ptr<Sequence<T>> list)> rule ) 
                                 : list(list), rule(rule), isInfinite(true) {}
@@ -91,6 +94,7 @@ class MainGenerator : public IGenerator<T>
         Cardinal GetLength() override { 
                 return isInfinite ? Cardinal::Infinite() : Cardinal( list->GetLength() ); 
         }
+        size_t GetMaterializedCount() const { return list->GetLength(); }
 };
 
 
@@ -138,43 +142,73 @@ class ChangeGenerator : public IGenerator<T>
                 }
                 return prevLen;
         }
+        size_t GetMaterializedCount() const { return prevGen->GetMaterializedCount(); }
 };
 
 template< class T >
 class LazySequence
 {
         private:
-        MutableArraySequence<T> list;
-        std::shared_ptr<IGenerator<T>> generator;
+        std::shared_ptr<IGenerator<T>> gen;
 
-        LazySequence( const LazySequence<T>& list, std::shared_ptr<IGenerator<T>> newGen ) 
-                : list(list.list), generator(newGen) {}
+        LazySequence<T>* Change( Change<T> change ) {
+                return new LazySequence( std::shared_ptr(new ChangeGenerator( gen, change )) );
+        }
 
         public:
         using value_type = T;
 
-        LazySequence() : list(), generator(nullptr) {}
-        LazySequence( T* items, int count ) : list( items, static_cast<size_t>(count) ), generator(nullptr) {}
-        LazySequence( Sequence<T>* seq )    : list(seq), generator(nullptr) {}
-        //LazySequence( T(*func)(Sequence<T>*), Sequence<T>* seq ) : isInfinite(true), list(seq), generator(new Generator(this, func)) {} Зачем?
+        LazySequence() : gen(nullptr) {}
+        LazySequence( T* items, int count ) 
+                : gen(std::make_shared<MainGenerator<T>>( std::make_shared<MutableArraySequence<T>>( items, count ) )) {}
+        LazySequence( Sequence<T>* seq ) 
+                : gen( std::make_shared<MainGenerator<T>>(std::shared_ptr<Sequence<T>>(seq)) ) {}
         LazySequence( std::function<T(Sequence<T>*)> func, Sequence<T>* seq ) 
-                : list(seq), generator(nullptr) { if(func) this->generator = std::make_shared<IGenerator>(this, func); }
-        LazySequence( const LazySequence<T>& list ) 
-                : list(list.list), generator(nullptr) { if(list.generator) this->generator = std::make_shared<IGenerator>(this, *(list.generator)); }
+                : gen( std::shared_ptr<Sequence<T>>(seq), func ) {}
+        LazySequence( std::shared_ptr<IGenerator<T>> gen ) : gen(gen) {}
         ~LazySequence() = default;
 
         T GetFirst() { return Get(0); }
-        T GetLast()  { return Get(list.GetLength() - 1); }
-        const T& Get(size_t index) { return generator->Get(index); }
-        Cardinal GetLength() { return generator->GetLength(); }
-        size_t GetMaterializedCount() const { return list.GetLength(); } 
+        T GetLast()  { return Get(gen->GetLength().GetSize() - 1); }
+        const T& Get(size_t index) { return gen->Get(index); }
+        Cardinal GetLength()       { return gen->GetLength(); }
+        size_t GetMaterializedCount() const { return gen->GetMaterializedCount(); } 
         
-        LazySequence<T>* Set( size_t index, T value );
+        LazySequence<T>* Set      ( T item, size_t index ) { return Change( {index, item, Action::SET}); }
+        LazySequence<T>* Append   ( T item )               { return Change( {gen->GetLength(), item, Action::INSERT} ); }
+        LazySequence<T>* Prepend  ( T item )               { return Change( {0,     item, Action::INSERT} ); }
+        LazySequence<T>* InsertAt ( T item, size_t index ) { return Change( {index, item, Action::INSERT} ); }
+        LazySequence<T>* Remove   ( size_t index )         { return Change( {index, 0,    Action::REMOVE} ); }
         LazySequence<T>* GetSubsequence( size_t startIndex, size_t endIndex );
-        LazySequence<T>* Append(T item);
-        LazySequence<T>* Prepend(T item);
-        LazySequence<T>* InsertAt( T item, size_t index );
         LazySequence<T>* Concat( LazySequence<T>* list );
 };
 
-#include "../implementation/LazySequence.tpp"
+template< class T >
+LazySequence<T>* LazySequence<T>::GetSubsequence( size_t startIndex, size_t endIndex ) {
+        MutableArraySequence<T> seq;
+        try {
+                for( size_t i = 0; i < endIndex; ++i ) {
+                        seq.Set( i, gen->Get(startIndex + i) );
+                }
+        } catch(...) {
+                throw OutOfRange("Index out of range");
+        }
+        return new LazySequence<T>(seq);
+}
+
+template< class T >
+LazySequence<T>* LazySequence<T>::Concat( LazySequence<T>* list ) {
+        LazySequence<T> seq;
+        try {
+                for( size_t i = 0; i < this->gen->GetLength().GetSize(); ++i ) {
+                        seq->Append( gen->Set(i) );
+                }
+
+                for( size_t i = 0; i < list->gen->GetLength().GetSize(); ++i ) {
+                        seq->Append( gen->Set(i) );
+                }
+        } catch(...) {
+                throw OutOfRange("Index out of range");
+        }
+        return seq;
+}
