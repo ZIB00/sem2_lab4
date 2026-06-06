@@ -4,5 +4,17 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DSequences_EXPORTS @CMakeFiles/Sequences.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\Sequences.dir\\Sequences_autogen\\mocs_compilation.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\build\\include\\Sequences\\Sequences_autogen\\mocs_compilation.cpp",
   "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/include/Sequences/Sequences_autogen/mocs_compilation.cpp",
   "output": "include/Sequences/CMakeFiles/Sequences.dir/Sequences_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\tests.dir\\tests_autogen\\mocs_compilation.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\build\\tests\\tests_autogen\\mocs_compilation.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests/tests_autogen/mocs_compilation.cpp",
+  "output": "tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\tests.dir\\LazySequenceTests.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceTests.cpp",
+  "output": "tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj"
 }
 ]

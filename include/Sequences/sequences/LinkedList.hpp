@@ -1,6 +1,6 @@
 #pragma once
 
-#include "other/Exceptions.hpp"
+#include "../other/Exceptions.hpp"
 #include <initializer_list>
 
 template<class T>

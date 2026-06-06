@@ -1,3 +1,30 @@
-Start testing: Jun 05 13:48 RTZ 2 (çèìà)
+Start testing: Jun 06 21:32 RTZ 2 (çèìà)
 ----------------------------------------------------------
-End testing: Jun 05 13:48 RTZ 2 (çèìà)
+43/57 Testing: LazySequenceTest.SubsequenceSingleElement
+43/57 Test: LazySequenceTest.SubsequenceSingleElement
+Command: "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests.exe" "--gtest_filter=LazySequenceTest.SubsequenceSingleElement" "--gtest_also_run_disabled_tests"
+Directory: C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests
+"LazySequenceTest.SubsequenceSingleElement" start time: Jun 06 21:32 RTZ 2 (çèìà)
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = LazySequenceTest.SubsequenceSingleElement
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LazySequenceTest
+[ RUN      ] LazySequenceTest.SubsequenceSingleElement
+[       OK ] LazySequenceTest.SubsequenceSingleElement (0 ms)
+[----------] 1 test from LazySequenceTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Passed.
+"LazySequenceTest.SubsequenceSingleElement" end time: Jun 06 21:32 RTZ 2 (çèìà)
+"LazySequenceTest.SubsequenceSingleElement" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jun 06 21:32 RTZ 2 (çèìà)

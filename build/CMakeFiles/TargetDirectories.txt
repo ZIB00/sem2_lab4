@@ -7,3 +7,9 @@ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/include/Sequences/CMakeF
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/include/Sequences/CMakeFiles/rebuild_cache.dir
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/include/Sequences/CMakeFiles/Sequences_autogen_timestamp_deps.dir
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/include/Sequences/CMakeFiles/Sequences_autogen.dir
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests/CMakeFiles/tests.dir
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests/CMakeFiles/test.dir
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests/CMakeFiles/edit_cache.dir
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests/CMakeFiles/rebuild_cache.dir
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests/CMakeFiles/tests_autogen_timestamp_deps.dir
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests/CMakeFiles/tests_autogen.dir

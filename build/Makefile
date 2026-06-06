@@ -164,6 +164,45 @@ Sequences_autogen/fast:
 	$(MAKE) $(MAKESILENT) -f include\Sequences\CMakeFiles\Sequences_autogen.dir\build.make include/Sequences/CMakeFiles/Sequences_autogen.dir/build
 .PHONY : Sequences_autogen/fast
 
+#=============================================================================
+# Target rules for targets named tests
+
+# Build rule for target.
+tests: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests
+.PHONY : tests
+
+# fast build rule for target.
+tests/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/build
+.PHONY : tests/fast
+
+#=============================================================================
+# Target rules for targets named tests_autogen_timestamp_deps
+
+# Build rule for target.
+tests_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests_autogen_timestamp_deps
+.PHONY : tests_autogen_timestamp_deps
+
+# fast build rule for target.
+tests_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen_timestamp_deps.dir\build.make tests/CMakeFiles/tests_autogen_timestamp_deps.dir/build
+.PHONY : tests_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named tests_autogen
+
+# Build rule for target.
+tests_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests_autogen
+.PHONY : tests_autogen
+
+# fast build rule for target.
+tests_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen.dir\build.make tests/CMakeFiles/tests_autogen.dir/build
+.PHONY : tests_autogen/fast
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -175,7 +214,10 @@ help:
 	@echo ... test
 	@echo ... Sequences_autogen
 	@echo ... Sequences_autogen_timestamp_deps
+	@echo ... tests_autogen
+	@echo ... tests_autogen_timestamp_deps
 	@echo ... Sequences
+	@echo ... tests
 .PHONY : help
 
 

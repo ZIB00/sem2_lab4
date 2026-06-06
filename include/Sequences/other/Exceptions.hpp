@@ -30,7 +30,7 @@ class OtherError : public std::exception
 class BadOptionalAccess : public std::exception 
 {
     public:
-    const char* what() const override {
+    const char* what() const noexcept override {
         return "bad optional access: optional is empty";
     }
 };
@@ -40,7 +40,7 @@ class NotSupportedException : public std::logic_error
     public:
     using std::logic_error::logic_error;
     
-    const char* what() const override {
+    const char* what() const noexcept override {
         return "Not supported";
     }
 };

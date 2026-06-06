@@ -24,11 +24,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU-CXX.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Compiler/GNU.cmake"
+  "C:/Program Files/CMake/share/cmake-4.3/Modules/FindGTest.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/FindVulkan.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/GNUInstallDirs.cmake"
+  "C:/Program Files/CMake/share/cmake-4.3/Modules/GoogleTest.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCXXLinkerInformation.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CMakeCommonLinkerInformation.cmake"
   "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CheckCompilerFlag.cmake"
@@ -51,6 +53,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.3.2/CMakeRCCompiler.cmake"
   "CMakeFiles/4.3.2/CMakeSystem.cmake"
   "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/CMakeLists.txt"
+  "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/CMakeLists.txt"
+  "C:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake"
+  "C:/msys64/mingw64/lib/cmake/GTest/GTestConfigVersion.cmake"
+  "C:/msys64/mingw64/lib/cmake/GTest/GTestTargets-release.cmake"
+  "C:/msys64/mingw64/lib/cmake/GTest/GTestTargets.cmake"
   "C:/msys64/mingw64/lib/cmake/Qt6/FindWrapAtomic.cmake"
   "C:/msys64/mingw64/lib/cmake/Qt6/FindWrapVulkanHeaders.cmake"
   "C:/msys64/mingw64/lib/cmake/Qt6/Qt6Config.cmake"
@@ -244,6 +251,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "include/Sequences/CMakeFiles/Sequences_autogen.dir/AutogenInfo.json"
   "include/Sequences/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "tests/CMakeFiles/tests_autogen.dir/AutogenInfo.json"
+  "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -251,4 +260,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "include/Sequences/CMakeFiles/Sequences.dir/DependInfo.cmake"
   "include/Sequences/CMakeFiles/Sequences_autogen_timestamp_deps.dir/DependInfo.cmake"
   "include/Sequences/CMakeFiles/Sequences_autogen.dir/DependInfo.cmake"
+  "tests/CMakeFiles/tests.dir/DependInfo.cmake"
+  "tests/CMakeFiles/tests_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "tests/CMakeFiles/tests_autogen.dir/DependInfo.cmake"
   )

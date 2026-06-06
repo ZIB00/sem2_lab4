@@ -1,3 +1,6 @@
 set(__QT_DEPLOY_TARGET_Sequences_FILE C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/libSequences.dll)
 set(__QT_DEPLOY_TARGET_Sequences_TYPE SHARED_LIBRARY)
 set(__QT_DEPLOY_TARGET_Sequences_RUNTIME_DLLS )
+set(__QT_DEPLOY_TARGET_tests_FILE C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests.exe)
+set(__QT_DEPLOY_TARGET_tests_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_tests_RUNTIME_DLLS C:/msys64/mingw64/bin/libgtest_main.dll;C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/libSequences.dll;C:/msys64/mingw64/bin/libgtest.dll)

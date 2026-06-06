@@ -1,0 +1,297 @@
+{
+  "tests": 57,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "LazySequenceTest",
+      "tests": 57,
+      "testsuite": [
+        {
+          "name": "GetMaterializedCountIsZeroInTheBegining",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 9
+        },
+        {
+          "name": "RemoveShiftMathCompact",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 17
+        },
+        {
+          "name": "EmptySequenceLengthIsZero",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 26
+        },
+        {
+          "name": "EmptySequenceIsFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 32
+        },
+        {
+          "name": "InitFromInitializerListHasCorrectLength",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 38
+        },
+        {
+          "name": "InitFromRuleHasCorrectMaterialization",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 44
+        },
+        {
+          "name": "InitFromRuleIsFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 50
+        },
+        {
+          "name": "GetMaterializesElementsToTargetIndex",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 56
+        },
+        {
+          "name": "GetFirstMaterializesOnlyOneElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 65
+        },
+        {
+          "name": "CachingPreventsReevaluationV1",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 73
+        },
+        {
+          "name": "CachingPreventsReevaluationV2",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 81
+        },
+        {
+          "name": "SetDoesNotModifyOriginal",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 90
+        },
+        {
+          "name": "InsertDoesNotModifyOriginal",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 98
+        },
+        {
+          "name": "RemoveDoesNotModifyOriginalGetLength",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 106
+        },
+        {
+          "name": "RemoveDoesNotModifyOriginalGet",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 114
+        },
+        {
+          "name": "MultipleBranchesFromOneBaseV1",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 122
+        },
+        {
+          "name": "MultipleBranchesFromOneBaseV2",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 129
+        },
+        {
+          "name": "MultipleBranchesFromOneBaseV3",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 136
+        },
+        {
+          "name": "SetFirstElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 143
+        },
+        {
+          "name": "SetMiddleElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 152
+        },
+        {
+          "name": "SetLastElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 161
+        },
+        {
+          "name": "SetMultipleTimesOnSameIndex",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 170
+        },
+        {
+          "name": "SetChainedMultipleIndices",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 179
+        },
+        {
+          "name": "InsertAtZero",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 188
+        },
+        {
+          "name": "InsertAtMiddle",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 197
+        },
+        {
+          "name": "InsertAtEnd",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 206
+        },
+        {
+          "name": "PrependElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 215
+        },
+        {
+          "name": "AppendElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 224
+        },
+        {
+          "name": "MultiplePrepends",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 233
+        },
+        {
+          "name": "MultipleAppends",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 242
+        },
+        {
+          "name": "RemoveFirstElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 251
+        },
+        {
+          "name": "RemoveMiddleElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 260
+        },
+        {
+          "name": "RemoveLastElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 269
+        },
+        {
+          "name": "RemoveMultipleConsecutive",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 278
+        },
+        {
+          "name": "RemoveAllElements",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 287
+        },
+        {
+          "name": "InsertThenRemoveSameIndex",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 295
+        },
+        {
+          "name": "SetThenRemoveSameIndex",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 304
+        },
+        {
+          "name": "RemoveThenInsertSameIndex",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 313
+        },
+        {
+          "name": "SetThenInsertBefore",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 322
+        },
+        {
+          "name": "InsertThenSetAfter",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 331
+        },
+        {
+          "name": "SubsequenceFull",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 340
+        },
+        {
+          "name": "SubsequenceMiddle",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 349
+        },
+        {
+          "name": "SubsequenceSingleElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 358
+        },
+        {
+          "name": "SubsequenceFromModified",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 367
+        },
+        {
+          "name": "ConcatTwoFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 377
+        },
+        {
+          "name": "ConcatEmptyWithFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 387
+        },
+        {
+          "name": "ConcatModifiedSequences",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 397
+        },
+        {
+          "name": "LengthAfterAppends",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 407
+        },
+        {
+          "name": "LengthAfterRemoves",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 415
+        },
+        {
+          "name": "LengthAfterConcat",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 423
+        },
+        {
+          "name": "GetOutOfBoundsEmpty",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 432
+        },
+        {
+          "name": "GetOutOfBoundsFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 438
+        },
+        {
+          "name": "GetLastOnEmpty",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 444
+        },
+        {
+          "name": "SubsequenceInvalidRange",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 450
+        },
+        {
+          "name": "AppendToInfiniteThrows",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 456
+        },
+        {
+          "name": "GetLastOnInfiniteThrows",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 462
+        },
+        {
+          "name": "InfiniteConcatFiniteIsInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 468
+        }
+      ]
+    }
+  ]
+}

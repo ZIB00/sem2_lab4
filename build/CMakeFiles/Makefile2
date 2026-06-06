@@ -63,18 +63,22 @@ CMAKE_BINARY_DIR = C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build
 
 # The main recursive "all" target.
 all: include/Sequences/all
+all: tests/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: include/Sequences/codegen
+codegen: tests/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: include/Sequences/preinstall
+preinstall: tests/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: include/Sequences/clean
+clean: tests/clean
 .PHONY : clean
 
 #=============================================================================
@@ -97,6 +101,27 @@ include/Sequences/clean: include/Sequences/CMakeFiles/Sequences.dir/clean
 include/Sequences/clean: include/Sequences/CMakeFiles/Sequences_autogen_timestamp_deps.dir/clean
 include/Sequences/clean: include/Sequences/CMakeFiles/Sequences_autogen.dir/clean
 .PHONY : include/Sequences/clean
+
+#=============================================================================
+# Directory level rules for directory tests
+
+# Recursive "all" directory target.
+tests/all: tests/CMakeFiles/tests.dir/all
+.PHONY : tests/all
+
+# Recursive "codegen" directory target.
+tests/codegen: tests/CMakeFiles/tests.dir/codegen
+.PHONY : tests/codegen
+
+# Recursive "preinstall" directory target.
+tests/preinstall:
+.PHONY : tests/preinstall
+
+# Recursive "clean" directory target.
+tests/clean: tests/CMakeFiles/tests.dir/clean
+tests/clean: tests/CMakeFiles/tests_autogen_timestamp_deps.dir/clean
+tests/clean: tests/CMakeFiles/tests_autogen.dir/clean
+.PHONY : tests/clean
 
 #=============================================================================
 # Target rules for target include/Sequences/CMakeFiles/Sequences.dir
@@ -194,6 +219,104 @@ include/Sequences/CMakeFiles/Sequences_autogen.dir/codegen: include/Sequences/CM
 include/Sequences/CMakeFiles/Sequences_autogen.dir/clean:
 	$(MAKE) $(MAKESILENT) -f include\Sequences\CMakeFiles\Sequences_autogen.dir\build.make include/Sequences/CMakeFiles/Sequences_autogen.dir/clean
 .PHONY : include/Sequences/CMakeFiles/Sequences_autogen.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/tests.dir
+
+# All Build rule for target.
+tests/CMakeFiles/tests.dir/all: tests/CMakeFiles/tests_autogen.dir/all
+tests/CMakeFiles/tests.dir/all: tests/CMakeFiles/tests_autogen_timestamp_deps.dir/all
+tests/CMakeFiles/tests.dir/all: include/Sequences/CMakeFiles/Sequences.dir/all
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=5,6,7,8 "Built target tests"
+.PHONY : tests/CMakeFiles/tests.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/tests.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles 9
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests/CMakeFiles/tests.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles 0
+.PHONY : tests/CMakeFiles/tests.dir/rule
+
+# Convenience name for target.
+tests: tests/CMakeFiles/tests.dir/rule
+.PHONY : tests
+
+# codegen rule for target.
+tests/CMakeFiles/tests.dir/codegen: tests/CMakeFiles/tests_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=5,6,7,8 "Finished codegen for target tests"
+.PHONY : tests/CMakeFiles/tests.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/tests.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/clean
+.PHONY : tests/CMakeFiles/tests.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/tests_autogen_timestamp_deps.dir
+
+# All Build rule for target.
+tests/CMakeFiles/tests_autogen_timestamp_deps.dir/all: include/Sequences/CMakeFiles/Sequences.dir/all
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen_timestamp_deps.dir\build.make tests/CMakeFiles/tests_autogen_timestamp_deps.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen_timestamp_deps.dir\build.make tests/CMakeFiles/tests_autogen_timestamp_deps.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num= "Built target tests_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/tests_autogen_timestamp_deps.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/tests_autogen_timestamp_deps.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles 4
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests/CMakeFiles/tests_autogen_timestamp_deps.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles 0
+.PHONY : tests/CMakeFiles/tests_autogen_timestamp_deps.dir/rule
+
+# Convenience name for target.
+tests_autogen_timestamp_deps: tests/CMakeFiles/tests_autogen_timestamp_deps.dir/rule
+.PHONY : tests_autogen_timestamp_deps
+
+# codegen rule for target.
+tests/CMakeFiles/tests_autogen_timestamp_deps.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen_timestamp_deps.dir\build.make tests/CMakeFiles/tests_autogen_timestamp_deps.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num= "Finished codegen for target tests_autogen_timestamp_deps"
+.PHONY : tests/CMakeFiles/tests_autogen_timestamp_deps.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/tests_autogen_timestamp_deps.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen_timestamp_deps.dir\build.make tests/CMakeFiles/tests_autogen_timestamp_deps.dir/clean
+.PHONY : tests/CMakeFiles/tests_autogen_timestamp_deps.dir/clean
+
+#=============================================================================
+# Target rules for target tests/CMakeFiles/tests_autogen.dir
+
+# All Build rule for target.
+tests/CMakeFiles/tests_autogen.dir/all: tests/CMakeFiles/tests_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen.dir\build.make tests/CMakeFiles/tests_autogen.dir/depend
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen.dir\build.make tests/CMakeFiles/tests_autogen.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=9 "Built target tests_autogen"
+.PHONY : tests/CMakeFiles/tests_autogen.dir/all
+
+# Build rule for subdir invocation for target.
+tests/CMakeFiles/tests_autogen.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles 5
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 tests/CMakeFiles/tests_autogen.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles 0
+.PHONY : tests/CMakeFiles/tests_autogen.dir/rule
+
+# Convenience name for target.
+tests_autogen: tests/CMakeFiles/tests_autogen.dir/rule
+.PHONY : tests_autogen
+
+# codegen rule for target.
+tests/CMakeFiles/tests_autogen.dir/codegen: tests/CMakeFiles/tests_autogen_timestamp_deps.dir/all
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen.dir\build.make tests/CMakeFiles/tests_autogen.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=9 "Finished codegen for target tests_autogen"
+.PHONY : tests/CMakeFiles/tests_autogen.dir/codegen
+
+# clean rule for target.
+tests/CMakeFiles/tests_autogen.dir/clean:
+	$(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen.dir\build.make tests/CMakeFiles/tests_autogen.dir/clean
+.PHONY : tests/CMakeFiles/tests_autogen.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

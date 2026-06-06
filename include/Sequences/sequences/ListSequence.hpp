@@ -119,6 +119,14 @@ void ListSequence<T>::SetItems(T* items, size_t count)
 }
 
 template<class T>
+void ListSequence<T>::SetItems(std::initializer_list<T> items)
+{
+    LinkedList<T>* newItems = new LinkedList<T>(items);
+    delete this->items;
+    this->items = newItems;
+}
+
+template<class T>
 void ListSequence<T>::CopyItems(const ListSequence<T>& sequence)
 {
     LinkedList<T>* copiedItems = new LinkedList<T>(*sequence.items);

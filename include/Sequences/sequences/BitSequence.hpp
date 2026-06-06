@@ -2,7 +2,7 @@
 
 #include "DynamicArray.hpp"
 #include "Sequence.hpp"
-#include "other/Exceptions.hpp"
+#include "../other/Exceptions.hpp"
 #include <algorithm>
 
 template<class T>
