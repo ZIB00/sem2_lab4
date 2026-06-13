@@ -45,15 +45,15 @@
 		},
 		{
 			"backtrace" : 0,
-			"id" : "GTest::gtest::@a44f0ac069e85531cdee"
-		},
-		{
-			"backtrace" : 0,
 			"id" : "GTest::gtest_main::@a44f0ac069e85531cdee"
 		},
 		{
 			"backtrace" : 0,
 			"id" : "Sequences::@91d79cbfd5ea5b9c682f"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "GTest::gtest::@a44f0ac069e85531cdee"
 		}
 	],
 	"paths" : 

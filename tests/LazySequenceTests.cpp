@@ -20,7 +20,7 @@ TEST(LazySequenceTest, RemoveShiftMathCompact) {
     LazySequence<int> modSeq = seq.Remove(2);
     MutableArraySequence<int> expected = {10, 20, 40, 50};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Проверка удаления элемента по индексу 2");
+    LAZY_EQ(modSeq, expected, "Проверка удаления элемента по индексу 2");
 }
 
 TEST(LazySequenceTest, EmptySequenceLengthIsZero) {
@@ -146,7 +146,7 @@ TEST(LazySequenceTest, SetFirstElement) {
     LazySequence<int> modSeq = seq.Set(52, 0);
     MutableArraySequence<int> expected = {52, 20, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Set(0)");
+    LAZY_EQ(modSeq, expected, "Set(0)");
 }
 
 TEST(LazySequenceTest, SetMiddleElement) {
@@ -155,7 +155,7 @@ TEST(LazySequenceTest, SetMiddleElement) {
     LazySequence<int> modSeq = seq.Set(52, 1);
     MutableArraySequence<int> expected = {10, 52, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Set(1)");
+    LAZY_EQ(modSeq, expected, "Set(1)");
 }
 
 TEST(LazySequenceTest, SetLastElement) {
@@ -164,7 +164,7 @@ TEST(LazySequenceTest, SetLastElement) {
     LazySequence<int> modSeq = seq.Set(52, 2);
     MutableArraySequence<int> expected = {10, 20, 52};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Set(2)");
+    LAZY_EQ(modSeq, expected, "Set(2)");
 }
 
 TEST(LazySequenceTest, SetMultipleTimesOnSameIndex) {
@@ -173,7 +173,7 @@ TEST(LazySequenceTest, SetMultipleTimesOnSameIndex) {
     LazySequence<int> modSeq = seq.Set(52, 1).Set(228, 1);
     MutableArraySequence<int> expected = {10, 228, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Set(1) -> Set(1)");
+    LAZY_EQ(modSeq, expected, "Set(1) -> Set(1)");
 }
 
 TEST(LazySequenceTest, SetChainedMultipleIndices) {
@@ -182,7 +182,7 @@ TEST(LazySequenceTest, SetChainedMultipleIndices) {
     LazySequence<int> modSeq = seq.Set(52, 0).Set(228, 2);
     MutableArraySequence<int> expected = {52, 20, 228};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Set(0) -> Set(2)");
+    LAZY_EQ(modSeq, expected, "Set(0) -> Set(2)");
 }
 
 TEST(LazySequenceTest, InsertAtZero) {
@@ -191,7 +191,7 @@ TEST(LazySequenceTest, InsertAtZero) {
     LazySequence<int> modSeq = seq.InsertAt(52, 0);
     MutableArraySequence<int> expected = {52, 10, 20};
 
-    ExpectLazySequenceMatches(modSeq, expected, "InsertAt(0)");
+    LAZY_EQ(modSeq, expected, "InsertAt(0)");
 }
 
 TEST(LazySequenceTest, InsertAtMiddle) {
@@ -200,7 +200,7 @@ TEST(LazySequenceTest, InsertAtMiddle) {
     LazySequence<int> modSeq = seq.InsertAt(52, 1);
     MutableArraySequence<int> expected = {10, 52, 20, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "InsertAt(1)");
+    LAZY_EQ(modSeq, expected, "InsertAt(1)");
 }
 
 TEST(LazySequenceTest, InsertAtEnd) {
@@ -209,7 +209,7 @@ TEST(LazySequenceTest, InsertAtEnd) {
     LazySequence<int> modSeq = seq.InsertAt(52, 2);
     MutableArraySequence<int> expected = {10, 20, 52};
 
-    ExpectLazySequenceMatches(modSeq, expected, "InsertAt(2)");
+    LAZY_EQ(modSeq, expected, "InsertAt(2)");
 }
 
 TEST(LazySequenceTest, PrependElement) {
@@ -218,7 +218,7 @@ TEST(LazySequenceTest, PrependElement) {
     LazySequence<int> modSeq = seq.Prepend(52);
     MutableArraySequence<int> expected = {52, 10, 20};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Prepend()");
+    LAZY_EQ(modSeq, expected, "Prepend()");
 }
 
 TEST(LazySequenceTest, AppendElement) {
@@ -227,7 +227,7 @@ TEST(LazySequenceTest, AppendElement) {
     LazySequence<int> modSeq = seq.Append(52);
     MutableArraySequence<int> expected = {10, 20, 52};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Append()");
+    LAZY_EQ(modSeq, expected, "Append()");
 }
 
 TEST(LazySequenceTest, MultiplePrepends) {
@@ -236,7 +236,7 @@ TEST(LazySequenceTest, MultiplePrepends) {
     LazySequence<int> modSeq = seq.Prepend(20).Prepend(30);
     MutableArraySequence<int> expected = {30, 20, 10};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Prepend() -> Prepend()");
+    LAZY_EQ(modSeq, expected, "Prepend() -> Prepend()");
 }
 
 TEST(LazySequenceTest, MultipleAppends) {
@@ -245,7 +245,7 @@ TEST(LazySequenceTest, MultipleAppends) {
     LazySequence<int> modSeq = seq.Append(20).Append(30);
     MutableArraySequence<int> expected = {10, 20, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Append() -> Append()");
+    LAZY_EQ(modSeq, expected, "Append() -> Append()");
 }
 
 TEST(LazySequenceTest, RemoveFirstElement) {
@@ -254,7 +254,7 @@ TEST(LazySequenceTest, RemoveFirstElement) {
     LazySequence<int> modSeq = seq.Remove(0);
     MutableArraySequence<int> expected = {20, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Remove(0)");
+    LAZY_EQ(modSeq, expected, "Remove(0)");
 }
 
 TEST(LazySequenceTest, RemoveMiddleElement) {
@@ -263,7 +263,7 @@ TEST(LazySequenceTest, RemoveMiddleElement) {
     LazySequence<int> modSeq = seq.Remove(1);
     MutableArraySequence<int> expected = {10, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Remove(1)");
+    LAZY_EQ(modSeq, expected, "Remove(1)");
 }
 
 TEST(LazySequenceTest, RemoveLastElement) {
@@ -272,7 +272,7 @@ TEST(LazySequenceTest, RemoveLastElement) {
     LazySequence<int> modSeq = seq.Remove(2);
     MutableArraySequence<int> expected = {10, 20};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Remove(2)");
+    LAZY_EQ(modSeq, expected, "Remove(2)");
 }
 
 TEST(LazySequenceTest, RemoveMultipleConsecutive) {
@@ -281,7 +281,7 @@ TEST(LazySequenceTest, RemoveMultipleConsecutive) {
     LazySequence<int> modSeq = seq.Remove(1).Remove(1);
     MutableArraySequence<int> expected = {10, 40};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Remove(1) -> Remove(1)");
+    LAZY_EQ(modSeq, expected, "Remove(1) -> Remove(1)");
 }
 
 TEST(LazySequenceTest, RemoveAllElements) {
@@ -298,7 +298,7 @@ TEST(LazySequenceTest, InsertThenRemoveSameIndex) {
     LazySequence<int> modSeq = seq.InsertAt(52, 1).Remove(1);
     MutableArraySequence<int> expected = {10, 20, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "InsertAt(1) -> Remove(1)");
+    LAZY_EQ(modSeq, expected, "InsertAt(1) -> Remove(1)");
 }
 
 TEST(LazySequenceTest, SetThenRemoveSameIndex) {
@@ -307,7 +307,7 @@ TEST(LazySequenceTest, SetThenRemoveSameIndex) {
     LazySequence<int> modSeq = seq.Set(52, 1).Remove(1);
     MutableArraySequence<int> expected = {10, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Set(1) -> Remove(1)");
+    LAZY_EQ(modSeq, expected, "Set(1) -> Remove(1)");
 }
 
 TEST(LazySequenceTest, RemoveThenInsertSameIndex) {
@@ -316,7 +316,7 @@ TEST(LazySequenceTest, RemoveThenInsertSameIndex) {
     LazySequence<int> modSeq = seq.Remove(1).InsertAt(52, 1);
     MutableArraySequence<int> expected = {10, 52, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Remove(1) -> InsertAt(1)");
+    LAZY_EQ(modSeq, expected, "Remove(1) -> InsertAt(1)");
 }
 
 TEST(LazySequenceTest, SetThenInsertBefore) {
@@ -325,7 +325,7 @@ TEST(LazySequenceTest, SetThenInsertBefore) {
     LazySequence<int> modSeq = seq.Set(52, 1).InsertAt(228, 0);
     MutableArraySequence<int> expected = {228, 10, 52, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "Set(1) -> InsertAt(0)");
+    LAZY_EQ(modSeq, expected, "Set(1) -> InsertAt(0)");
 }
 
 TEST(LazySequenceTest, InsertThenSetAfter) {
@@ -334,7 +334,7 @@ TEST(LazySequenceTest, InsertThenSetAfter) {
     LazySequence<int> modSeq = seq.InsertAt(52, 1).Set(228, 2);
     MutableArraySequence<int> expected = {10, 52, 228, 30};
 
-    ExpectLazySequenceMatches(modSeq, expected, "InsertAt(1) -> Set(2)");
+    LAZY_EQ(modSeq, expected, "InsertAt(1) -> Set(2)");
 }
 
 TEST(LazySequenceTest, SubsequenceFull) {
@@ -343,7 +343,7 @@ TEST(LazySequenceTest, SubsequenceFull) {
     LazySequence<int> sub = seq.GetSubsequence(0, 2);
     MutableArraySequence<int> expected = {10, 20, 30};
 
-    ExpectLazySequenceMatches(sub, expected, "Subsequence(0, 2)");
+    LAZY_EQ(sub, expected, "Subsequence(0, 2)");
 }
 
 TEST(LazySequenceTest, SubsequenceMiddle) {
@@ -352,7 +352,7 @@ TEST(LazySequenceTest, SubsequenceMiddle) {
     LazySequence<int> sub = seq.GetSubsequence(1, 3);
     MutableArraySequence<int> expected = {20, 30, 40};
 
-    ExpectLazySequenceMatches(sub, expected, "Subsequence(1, 3)");
+    LAZY_EQ(sub, expected, "Subsequence(1, 3)");
 }
 
 TEST(LazySequenceTest, SubsequenceSingleElement) {
@@ -361,7 +361,7 @@ TEST(LazySequenceTest, SubsequenceSingleElement) {
     LazySequence<int> sub = seq.GetSubsequence(1, 1);
     MutableArraySequence<int> expected = {20};
 
-    ExpectLazySequenceMatches(sub, expected, "Subsequence(1, 1)");
+    LAZY_EQ(sub, expected, "Subsequence(1, 1)");
 }
 
 TEST(LazySequenceTest, SubsequenceFromModified) {
@@ -371,7 +371,7 @@ TEST(LazySequenceTest, SubsequenceFromModified) {
     LazySequence<int> sub = modSeq.GetSubsequence(1, 2);
     MutableArraySequence<int> expected = {52, 30};
 
-    ExpectLazySequenceMatches(sub, expected, "Subsequence on modified");
+    LAZY_EQ(sub, expected, "Subsequence on modified");
 }
 
 TEST(LazySequenceTest, ConcatTwoFinite) {
@@ -381,7 +381,7 @@ TEST(LazySequenceTest, ConcatTwoFinite) {
     LazySequence<int> res = seq1.Concat(seq2);
     MutableArraySequence<int> expected = {1, 2, 3, 4};
 
-    ExpectLazySequenceMatches(res, expected, "Concat two finite");
+    LAZY_EQ(res, expected, "Concat two finite");
 }
 
 TEST(LazySequenceTest, ConcatEmptyWithFinite) {
@@ -391,7 +391,7 @@ TEST(LazySequenceTest, ConcatEmptyWithFinite) {
     LazySequence<int> res = seq1.Concat(seq2);
     MutableArraySequence<int> expected = {1, 2};
 
-    ExpectLazySequenceMatches(res, expected, "Concat empty and finite");
+    LAZY_EQ(res, expected, "Concat empty and finite");
 }
 
 TEST(LazySequenceTest, ConcatModifiedSequences) {
@@ -401,7 +401,7 @@ TEST(LazySequenceTest, ConcatModifiedSequences) {
     LazySequence<int> res = seq1.Remove(1).Concat(seq2.InsertAt(52, 0));
     MutableArraySequence<int> expected = {10, 52, 30, 40};
 
-    ExpectLazySequenceMatches(res, expected, "Concat modified sequences");
+    LAZY_EQ(res, expected, "Concat modified sequences");
 }
 
 TEST(LazySequenceTest, LengthAfterAppends) {

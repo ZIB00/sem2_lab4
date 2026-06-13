@@ -25,40 +25,11 @@
 	ProcessorClockFrequency="3401.000000"
 	>
 	<Testing>
-		<StartDateTime>Jun 06 21:32 RTZ 2 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</StartDateTime>
-		<StartTestTime>1780770735</StartTestTime>
-		<TestList>
-			<Test>./tests/LazySequenceTest.SubsequenceSingleElement</Test>
-		</TestList>
-		<Test Status="passed">
-			<Name>LazySequenceTest.SubsequenceSingleElement</Name>
-			<Path>./tests</Path>
-			<FullName>./tests/LazySequenceTest.SubsequenceSingleElement</FullName>
-			<FullCommandLine>C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests.exe "--gtest_filter=LazySequenceTest.SubsequenceSingleElement" "--gtest_also_run_disabled_tests"</FullCommandLine>
-			<StartTestTime>1780770735.478215</StartTestTime>
-			<Results>
-				<NamedMeasurement type="numeric/double" name="Execution Time">
-					<Value>0.015757</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="numeric/double" name="Processors">
-					<Value>1</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Completion Status">
-					<Value>Completed</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Command Line">
-					<Value>C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests.exe "--gtest_filter=LazySequenceTest.SubsequenceSingleElement" "--gtest_also_run_disabled_tests"</Value>
-				</NamedMeasurement>
-				<NamedMeasurement type="text/string" name="Environment">
-					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
-				</NamedMeasurement>
-				<Measurement>
-					<Value encoding="base64" compression="gzip">eJyVUD1PwzAQ3f0rbmyGOM2EVKkDH1UHoKAYpihCbrhGlhwb7DMIfj1xHFVtJaT2prPfh59fFYxRpoNeKjPLYOdsD7eL4rG4Kbxri87aTiOhp7zk5RWfH9wkQtzeopq3LdtYwgWsRwq8DAjslCZ0sIQH+fsj8DOgaTEiXIStn85iSKBxpbFHQ6xe7qeBaspXAo12Md+0+6AIOavz/TSw1nYrdcLRfClnTfQEj5SHjxPyoedpPFZD9bqBcZpLwicJPN1fIoPZHHqfnR8vCYAsSZ2x8zoglC5/t9/muOH/mgUnDT9+Z/jc87UQq7vYSeJy9gcDqr0G====</Value>
-				</Measurement>
-			</Results>
-		</Test>
-		<EndDateTime>Jun 06 21:32 RTZ 2 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</EndDateTime>
-		<EndTestTime>1780770735</EndTestTime>
+		<StartDateTime>Jun 08 21:08 RTZ 2 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</StartDateTime>
+		<StartTestTime>1780942114</StartTestTime>
+		<TestList/>
+		<EndDateTime>Jun 08 21:08 RTZ 2 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</EndDateTime>
+		<EndTestTime>1780942114</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

@@ -131,15 +131,15 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "tests_autogen::@a44f0ac069e85531cdee"
+			"backtrace" : 2,
+			"id" : "Sequences::@91d79cbfd5ea5b9c682f"
 		},
 		{
 			"id" : "tests_autogen_timestamp_deps::@a44f0ac069e85531cdee"
 		},
 		{
-			"backtrace" : 2,
-			"id" : "Sequences::@91d79cbfd5ea5b9c682f"
+			"backtrace" : 0,
+			"id" : "tests_autogen::@a44f0ac069e85531cdee"
 		}
 	],
 	"id" : "tests::@a44f0ac069e85531cdee",
@@ -199,15 +199,15 @@
 			"id" : "Qt6::uic::@6890427a1f51a3e7e1df"
 		},
 		{
-			"backtrace" : 0,
-			"id" : "tests_autogen::@a44f0ac069e85531cdee"
+			"backtrace" : 4,
+			"id" : "tests::@a44f0ac069e85531cdee"
 		},
 		{
 			"id" : "tests_autogen_timestamp_deps::@a44f0ac069e85531cdee"
 		},
 		{
-			"backtrace" : 4,
-			"id" : "tests::@a44f0ac069e85531cdee"
+			"backtrace" : 0,
+			"id" : "tests_autogen::@a44f0ac069e85531cdee"
 		}
 	],
 	"paths" : 

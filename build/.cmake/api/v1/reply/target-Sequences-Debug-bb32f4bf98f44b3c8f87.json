@@ -80,11 +80,11 @@
 	"dependencies" : 
 	[
 		{
-			"id" : "Sequences_autogen_timestamp_deps::@91d79cbfd5ea5b9c682f"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "Sequences_autogen::@91d79cbfd5ea5b9c682f"
+		},
+		{
+			"id" : "Sequences_autogen_timestamp_deps::@91d79cbfd5ea5b9c682f"
 		}
 	],
 	"id" : "Sequences::@91d79cbfd5ea5b9c682f",
@@ -114,11 +114,11 @@
 			"id" : "Qt6::uic::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "Sequences_autogen_timestamp_deps::@91d79cbfd5ea5b9c682f"
-		},
-		{
 			"backtrace" : 0,
 			"id" : "Sequences_autogen::@91d79cbfd5ea5b9c682f"
+		},
+		{
+			"id" : "Sequences_autogen_timestamp_deps::@91d79cbfd5ea5b9c682f"
 		}
 	],
 	"paths" : 

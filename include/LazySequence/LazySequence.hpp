@@ -33,16 +33,16 @@ class LazySequence
         ~LazySequence() = default;
 
         T GetFirst() const { return Get(0); }
-        T GetLast() const;
+        T GetLast()  const;
         const T& Get(size_t index)    const { return gen->Get(index); }
         Cardinal GetLength()          const { return gen->GetLength(); }
         size_t GetMaterializedCount() const { return gen->GetMaterializedCount(); } 
         
         LazySequence<T> Set      ( T item, size_t index ) const { return Change( {index, item, Action::SET}); }
         LazySequence<T> Append   ( T item ) const;
-        LazySequence<T> Prepend  ( T item )               const { return Change( {0,     item, Action::INSERT} ); }
+        LazySequence<T> Prepend  ( T item )               const { return Change( {0    , item, Action::INSERT} ); }
         LazySequence<T> InsertAt ( T item, size_t index ) const { return Change( {index, item, Action::INSERT} ); }
-        LazySequence<T> Remove   ( size_t index )         const { return Change( {index, T(),    Action::REMOVE} ); }
+        LazySequence<T> Remove   ( size_t index )         const { return Change( {index, T() , Action::REMOVE} ); }
         LazySequence<T> GetSubsequence( size_t startIndex, size_t endIndex ) const;
         LazySequence<T> Concat( const LazySequence<T>& list ) const;
 };

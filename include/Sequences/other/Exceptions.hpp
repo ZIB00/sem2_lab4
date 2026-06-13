@@ -44,3 +44,9 @@ class NotSupportedException : public std::logic_error
         return "Not supported";
     }
 };
+
+class EndOfStream : public std::logic_error 
+{
+    public:
+    using std::logic_error::logic_error;
+};

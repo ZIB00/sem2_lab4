@@ -7,7 +7,7 @@
 #include "../include/Sequences/sequences/Sequence.hpp"
 
 template <typename T>
-void ExpectLazySequenceMatches(const LazySequence<T>& seq, Sequence<T>& expected, const std::string& context) {
+void LAZY_EQ(const LazySequence<T>& seq, Sequence<T>& expected, const std::string& context) {
     size_t len = seq.GetLength().IsInfinite() ? seq.GetMaterializedCount() : seq.GetLength().GetSize();
 
     EXPECT_EQ(expected.GetLength(), len) 
