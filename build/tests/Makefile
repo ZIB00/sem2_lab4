@@ -167,6 +167,30 @@ tests_autogen/fast:
 	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests_autogen.dir\build.make tests/CMakeFiles/tests_autogen.dir/build
 .PHONY : tests_autogen/fast
 
+ActionChangeOrdinalTests.obj: ActionChangeOrdinalTests.cpp.obj
+.PHONY : ActionChangeOrdinalTests.obj
+
+# target to build an object file
+ActionChangeOrdinalTests.cpp.obj:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj
+.PHONY : ActionChangeOrdinalTests.cpp.obj
+
+ActionChangeOrdinalTests.i: ActionChangeOrdinalTests.cpp.i
+.PHONY : ActionChangeOrdinalTests.i
+
+# target to preprocess a source file
+ActionChangeOrdinalTests.cpp.i:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.i
+.PHONY : ActionChangeOrdinalTests.cpp.i
+
+ActionChangeOrdinalTests.s: ActionChangeOrdinalTests.cpp.s
+.PHONY : ActionChangeOrdinalTests.s
+
+# target to generate assembly for a file
+ActionChangeOrdinalTests.cpp.s:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.s
+.PHONY : ActionChangeOrdinalTests.cpp.s
+
 LazySequenceTests.obj: LazySequenceTests.cpp.obj
 .PHONY : LazySequenceTests.obj
 
@@ -190,6 +214,54 @@ LazySequenceTests.s: LazySequenceTests.cpp.s
 LazySequenceTests.cpp.s:
 	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.s
 .PHONY : LazySequenceTests.cpp.s
+
+LazySequenceUtiltsTests.obj: LazySequenceUtiltsTests.cpp.obj
+.PHONY : LazySequenceUtiltsTests.obj
+
+# target to build an object file
+LazySequenceUtiltsTests.cpp.obj:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj
+.PHONY : LazySequenceUtiltsTests.cpp.obj
+
+LazySequenceUtiltsTests.i: LazySequenceUtiltsTests.cpp.i
+.PHONY : LazySequenceUtiltsTests.i
+
+# target to preprocess a source file
+LazySequenceUtiltsTests.cpp.i:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.i
+.PHONY : LazySequenceUtiltsTests.cpp.i
+
+LazySequenceUtiltsTests.s: LazySequenceUtiltsTests.cpp.s
+.PHONY : LazySequenceUtiltsTests.s
+
+# target to generate assembly for a file
+LazySequenceUtiltsTests.cpp.s:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.s
+.PHONY : LazySequenceUtiltsTests.cpp.s
+
+StreamsTests.obj: StreamsTests.cpp.obj
+.PHONY : StreamsTests.obj
+
+# target to build an object file
+StreamsTests.cpp.obj:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj
+.PHONY : StreamsTests.cpp.obj
+
+StreamsTests.i: StreamsTests.cpp.i
+.PHONY : StreamsTests.i
+
+# target to preprocess a source file
+StreamsTests.cpp.i:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/StreamsTests.cpp.i
+.PHONY : StreamsTests.cpp.i
+
+StreamsTests.s: StreamsTests.cpp.s
+.PHONY : StreamsTests.s
+
+# target to generate assembly for a file
+StreamsTests.cpp.s:
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build && $(MAKE) $(MAKESILENT) -f tests\CMakeFiles\tests.dir\build.make tests/CMakeFiles/tests.dir/StreamsTests.cpp.s
+.PHONY : StreamsTests.cpp.s
 
 tests_autogen/mocs_compilation.obj: tests_autogen/mocs_compilation.cpp.obj
 .PHONY : tests_autogen/mocs_compilation.obj
@@ -227,9 +299,18 @@ help:
 	@echo ... tests_autogen
 	@echo ... tests_autogen_timestamp_deps
 	@echo ... tests
+	@echo ... ActionChangeOrdinalTests.obj
+	@echo ... ActionChangeOrdinalTests.i
+	@echo ... ActionChangeOrdinalTests.s
 	@echo ... LazySequenceTests.obj
 	@echo ... LazySequenceTests.i
 	@echo ... LazySequenceTests.s
+	@echo ... LazySequenceUtiltsTests.obj
+	@echo ... LazySequenceUtiltsTests.i
+	@echo ... LazySequenceUtiltsTests.s
+	@echo ... StreamsTests.obj
+	@echo ... StreamsTests.i
+	@echo ... StreamsTests.s
 	@echo ... tests_autogen/mocs_compilation.obj
 	@echo ... tests_autogen/mocs_compilation.i
 	@echo ... tests_autogen/mocs_compilation.s

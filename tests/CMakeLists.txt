@@ -1,7 +1,12 @@
 find_package(GTest REQUIRED)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 add_executable(tests 
+    ActionChangeOrdinalTests.cpp
+    LazySequenceUtiltsTests.cpp
     LazySequenceTests.cpp
+    StreamsTests.cpp
     TestUtils.hpp
 )
 

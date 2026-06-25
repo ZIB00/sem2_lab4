@@ -13,3 +13,4 @@ qt_standard_project_setup()
 
 add_subdirectory(include/Sequences)
 add_subdirectory(tests)
+add_subdirectory(src)

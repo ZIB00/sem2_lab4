@@ -1,295 +1,939 @@
 {
-  "tests": 57,
+  "tests": 163,
   "name": "AllTests",
   "testsuites": [
     {
+      "name": "ReadOnlyStreamStateTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "ReadThrowsWhenClosed",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 28
+        },
+        {
+          "name": "GetPositionThrowsWhenClosed",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 34
+        },
+        {
+          "name": "SeekThrowsWhenClosed",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 40
+        },
+        {
+          "name": "CloseThrowsWhenClosed",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 46
+        },
+        {
+          "name": "DoubleOpenThrowsLogicError",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "name": "WriteOnlyStreamStateTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "WriteThrowsWhenClosed",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 60
+        },
+        {
+          "name": "GetPositionThrowsWhenClosedWrite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 66
+        },
+        {
+          "name": "CloseThrowsWhenClosedWrite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 72
+        },
+        {
+          "name": "DoubleOpenThrowsLogicErrorWrite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 78
+        },
+        {
+          "name": "CloseTransitionsStateCorrectlyWrite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 85
+        }
+      ]
+    },
+    {
+      "name": "SeqReadStreamTest",
+      "tests": 10,
+      "testsuite": [
+        {
+          "name": "InitialPositionIsZero",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 94
+        },
+        {
+          "name": "ReadReturnsFirstElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 101
+        },
+        {
+          "name": "ReadAdvancesPosition",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 108
+        },
+        {
+          "name": "ReadReturnsSecondElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 116
+        },
+        {
+          "name": "EOFIsTrueAtEnd",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 124
+        },
+        {
+          "name": "ReadThrowsEndOfStream",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 132
+        },
+        {
+          "name": "SeekUpdatesPositionForward",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 140
+        },
+        {
+          "name": "SeekForwardReadsCorrectValue",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 148
+        },
+        {
+          "name": "SeekClampsToMaxAvailableIndex",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 156
+        },
+        {
+          "name": "SeekBackwardAllowsRereading",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 164
+        }
+      ]
+    },
+    {
+      "name": "StringReadStreamTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "ReadParsesFirstElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 175
+        },
+        {
+          "name": "PositionAdvancesInString",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 182
+        },
+        {
+          "name": "ReadParsesSecondElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 190
+        },
+        {
+          "name": "SeekForwardReadsCorrectToken",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 198
+        },
+        {
+          "name": "SeekBackwardRewindsStringStream",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 206
+        }
+      ]
+    },
+    {
+      "name": "LazySeqReadStreamTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "FiniteLazyReachesEOF",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 217
+        },
+        {
+          "name": "InfiniteLazyNeverReachesEOF",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 226
+        },
+        {
+          "name": "InfiniteLazyGeneratesValues",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 234
+        },
+        {
+          "name": "FiniteLazySeekClampsToBound",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 243
+        }
+      ]
+    },
+    {
+      "name": "FileReadStreamTest",
+      "tests": 5,
+      "testsuite": [
+        {
+          "name": "ReadFromDiskWorks",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 252
+        },
+        {
+          "name": "EOFTriggeredCorrectly",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 260
+        },
+        {
+          "name": "ReadThrowsAtEOF",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 269
+        },
+        {
+          "name": "SeekForwardSkipsTokens",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 278
+        },
+        {
+          "name": "SeekBackwardRewindsFileStream",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 287
+        }
+      ]
+    },
+    {
+      "name": "SeqWriteStreamTest",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "WriteAppendsElement",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 299
+        },
+        {
+          "name": "WriteAdvancesPosition",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 307
+        },
+        {
+          "name": "MultipleWritesUpdateLength",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 315
+        }
+      ]
+    },
+    {
+      "name": "FileWriteStreamTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "WriteAdvancesPositionInFile",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 326
+        },
+        {
+          "name": "WritesCorrectDataToDisk",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 334
+        }
+      ]
+    },
+    {
+      "name": "HugeStreamTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "WriteOneMillionElements",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 349
+        },
+        {
+          "name": "GetPositionFromHugeFileWork",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 365
+        },
+        {
+          "name": "SeekInHugeFileWork",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 385
+        },
+        {
+          "name": "SeekBackwardWorkInHugeFile",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 403
+        }
+      ]
+    },
+    {
+      "name": "InfiniteStreamTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "IsEndOfStreamAlwaysFalseAfterDeepSeek",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 423
+        },
+        {
+          "name": "ReadThrowsNoExceptionsOnExtensiveUsage",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+          "line": 432
+        }
+      ]
+    },
+    {
       "name": "LazySequenceTest",
-      "tests": 57,
+      "tests": 62,
       "testsuite": [
         {
           "name": "GetMaterializedCountIsZeroInTheBegining",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 9
+          "line": 10
         },
         {
           "name": "RemoveShiftMathCompact",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 17
+          "line": 18
         },
         {
           "name": "EmptySequenceLengthIsZero",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 26
+          "line": 27
         },
         {
           "name": "EmptySequenceIsFinite",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 32
+          "line": 33
         },
         {
           "name": "InitFromInitializerListHasCorrectLength",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 38
+          "line": 39
         },
         {
           "name": "InitFromRuleHasCorrectMaterialization",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 44
+          "line": 45
         },
         {
           "name": "InitFromRuleIsFinite",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 50
+          "line": 51
         },
         {
           "name": "GetMaterializesElementsToTargetIndex",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 56
+          "line": 57
         },
         {
           "name": "GetFirstMaterializesOnlyOneElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 65
+          "line": 66
         },
         {
           "name": "CachingPreventsReevaluationV1",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 73
+          "line": 74
         },
         {
           "name": "CachingPreventsReevaluationV2",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 81
+          "line": 82
         },
         {
           "name": "SetDoesNotModifyOriginal",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 90
+          "line": 91
         },
         {
           "name": "InsertDoesNotModifyOriginal",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 98
+          "line": 99
         },
         {
           "name": "RemoveDoesNotModifyOriginalGetLength",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 106
+          "line": 107
         },
         {
           "name": "RemoveDoesNotModifyOriginalGet",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 114
+          "line": 115
         },
         {
           "name": "MultipleBranchesFromOneBaseV1",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 122
+          "line": 123
         },
         {
           "name": "MultipleBranchesFromOneBaseV2",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 129
+          "line": 130
         },
         {
           "name": "MultipleBranchesFromOneBaseV3",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 136
+          "line": 137
         },
         {
           "name": "SetFirstElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 143
+          "line": 144
         },
         {
           "name": "SetMiddleElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 152
+          "line": 153
         },
         {
           "name": "SetLastElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 161
+          "line": 162
         },
         {
           "name": "SetMultipleTimesOnSameIndex",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 170
+          "line": 171
         },
         {
           "name": "SetChainedMultipleIndices",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 179
+          "line": 180
         },
         {
           "name": "InsertAtZero",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 188
+          "line": 189
         },
         {
           "name": "InsertAtMiddle",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 197
+          "line": 198
         },
         {
           "name": "InsertAtEnd",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 206
+          "line": 207
         },
         {
           "name": "PrependElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 215
+          "line": 216
         },
         {
           "name": "AppendElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 224
+          "line": 225
         },
         {
           "name": "MultiplePrepends",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 233
+          "line": 234
         },
         {
           "name": "MultipleAppends",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 242
+          "line": 243
         },
         {
           "name": "RemoveFirstElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 251
+          "line": 252
         },
         {
           "name": "RemoveMiddleElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 260
+          "line": 261
         },
         {
           "name": "RemoveLastElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 269
+          "line": 270
         },
         {
           "name": "RemoveMultipleConsecutive",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 278
+          "line": 279
         },
         {
           "name": "RemoveAllElements",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 287
+          "line": 288
         },
         {
           "name": "InsertThenRemoveSameIndex",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 295
+          "line": 296
         },
         {
           "name": "SetThenRemoveSameIndex",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 304
+          "line": 305
         },
         {
           "name": "RemoveThenInsertSameIndex",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 313
+          "line": 314
         },
         {
           "name": "SetThenInsertBefore",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 322
+          "line": 323
         },
         {
           "name": "InsertThenSetAfter",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 331
+          "line": 332
         },
         {
           "name": "SubsequenceFull",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 340
+          "line": 341
         },
         {
           "name": "SubsequenceMiddle",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 349
+          "line": 350
         },
         {
           "name": "SubsequenceSingleElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 358
+          "line": 359
         },
         {
           "name": "SubsequenceFromModified",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 367
+          "line": 368
         },
         {
           "name": "ConcatTwoFinite",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 377
+          "line": 378
         },
         {
           "name": "ConcatEmptyWithFinite",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 387
+          "line": 388
         },
         {
           "name": "ConcatModifiedSequences",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 397
+          "line": 398
         },
         {
           "name": "LengthAfterAppends",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 407
+          "line": 408
         },
         {
           "name": "LengthAfterRemoves",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 415
+          "line": 416
         },
         {
           "name": "LengthAfterConcat",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 423
+          "line": 424
         },
         {
           "name": "GetOutOfBoundsEmpty",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 432
+          "line": 433
         },
         {
           "name": "GetOutOfBoundsFinite",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 438
+          "line": 439
         },
         {
           "name": "GetLastOnEmpty",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 444
+          "line": 445
         },
         {
           "name": "SubsequenceInvalidRange",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 450
+          "line": 451
         },
         {
           "name": "AppendToInfiniteThrows",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 456
+          "line": 457
         },
         {
           "name": "GetLastOnInfiniteThrows",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 462
+          "line": 463
         },
         {
           "name": "InfiniteConcatFiniteIsInfinite",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
-          "line": 468
+          "line": 469
+        },
+        {
+          "name": "GetNextWork",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 478
+        },
+        {
+          "name": "GetNextManyCalls",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 484
+        },
+        {
+          "name": "TryGetNextwork",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 494
+        },
+        {
+          "name": "TryGetNextworkWithEmptySequenceValueOr",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 500
+        },
+        {
+          "name": "TryGetNextworkWithEmptySequenceValue",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
+          "line": 506
+        }
+      ]
+    },
+    {
+      "name": "LazySequenceUtiltsTests",
+      "tests": 17,
+      "testsuite": [
+        {
+          "name": "MapWork",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 12
+        },
+        {
+          "name": "MapT1ToT2",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 20
+        },
+        {
+          "name": "MapWithInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 28
+        },
+        {
+          "name": "MapEmptySequence",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 38
+        },
+        {
+          "name": "WhereWork",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 48
+        },
+        {
+          "name": "WhereWithInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 56
+        },
+        {
+          "name": "WhereNoMatch",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 66
+        },
+        {
+          "name": "WhereEmptySequence",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 74
+        },
+        {
+          "name": "ReduceWork",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 84
+        },
+        {
+          "name": "ReduceT1ToT2",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 91
+        },
+        {
+          "name": "ReduceWithInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 98
+        },
+        {
+          "name": "ReduceEmptySequenceThrows",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 104
+        },
+        {
+          "name": "ZipSameLength",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 112
+        },
+        {
+          "name": "ZipDifferentLengths",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 124
+        },
+        {
+          "name": "ZipFiniteWithInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 135
+        },
+        {
+          "name": "ZipTwoInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 146
+        },
+        {
+          "name": "ChainOperations",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+          "line": 158
+        }
+      ]
+    },
+    {
+      "name": "OrdinalTest",
+      "tests": 4,
+      "testsuite": [
+        {
+          "name": "InitFiniteness",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 6
+        },
+        {
+          "name": "InitInfinity",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 12
+        },
+        {
+          "name": "IsInfiniteTrue",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 18
+        },
+        {
+          "name": "IsInfiniteFalse",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "name": "OrdinalAdditionTest",
+      "tests": 9,
+      "testsuite": [
+        {
+          "name": "FinitePlusFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 32
+        },
+        {
+          "name": "FinitePlusFinite_NoInfinity",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 41
+        },
+        {
+          "name": "FinitePlusInfiniteInfinityCheck",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 50
+        },
+        {
+          "name": "FinitePlusInfinitefinitenessCheck",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 59
+        },
+        {
+          "name": "InfinitePlusFinitefinitenessCheck",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 68
+        },
+        {
+          "name": "InfinitePlusFiniteInfinityCheck",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 77
+        },
+        {
+          "name": "InfinitePlusInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 86
+        },
+        {
+          "name": "InfiniteWithFinitenessPlusInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 95
+        },
+        {
+          "name": "InfiniteWithFinitenessPlusInfinitefinitenessCheck",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 104
+        }
+      ]
+    },
+    {
+      "name": "OrdinalSubtractionTest",
+      "tests": 7,
+      "testsuite": [
+        {
+          "name": "FiniteMinusFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 115
+        },
+        {
+          "name": "FiniteMinusGreaterThanFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 123
+        },
+        {
+          "name": "InfiniteMinusFiniteInfinityCheck",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 131
+        },
+        {
+          "name": "InfiniteMinusFiniteIsFinitenessZero",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 139
+        },
+        {
+          "name": "InfiniteWithFinitenessMinusFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 147
+        },
+        {
+          "name": "InfiniteWithFinitenessMinusGreaterThanFinitenessInfinityCheck",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 155
+        },
+        {
+          "name": "InfiniteWithFinitenessMinusGreaterThanFinitenessFinitenessCheck",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 163
+        }
+      ]
+    },
+    {
+      "name": "OrdinalEqualityTest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "EqualsFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 173
+        },
+        {
+          "name": "NotEqualsFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 180
+        },
+        {
+          "name": "EqualsInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 187
+        },
+        {
+          "name": "EqualsInfiniteWithFiniteness",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 194
+        },
+        {
+          "name": "NotEqualsInfiniteDifferentFiniteness",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 201
+        },
+        {
+          "name": "NotEqualsInfiniteDifferentInfinity",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 208
+        }
+      ]
+    },
+    {
+      "name": "OrdinalGreaterThanTest",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "FiniteGreaterFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 217
+        },
+        {
+          "name": "FiniteNotGreaterFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 224
+        },
+        {
+          "name": "InfiniteGreaterFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 231
+        },
+        {
+          "name": "InfiniteWithFinitenessGreaterInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 238
+        },
+        {
+          "name": "MultiInfiniteGreaterSingleInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 245
+        },
+        {
+          "name": "MultiInfiniteGreaterSingleInfiniteWithFiniteness",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 252
+        }
+      ]
+    },
+    {
+      "name": "OrdinalLessThanTest",
+      "tests": 3,
+      "testsuite": [
+        {
+          "name": "FiniteLessFinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 261
+        },
+        {
+          "name": "FiniteLessInfinite",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 268
+        },
+        {
+          "name": "InfiniteLessInfiniteWithFiniteness",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 275
+        }
+      ]
+    },
+    {
+      "name": "OrdinalGreaterOrEqualTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "Greater",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 284
+        },
+        {
+          "name": "Equal",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 291
+        }
+      ]
+    },
+    {
+      "name": "OrdinalLessOrEqualTest",
+      "tests": 2,
+      "testsuite": [
+        {
+          "name": "Less",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 300
+        },
+        {
+          "name": "Equal",
+          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+          "line": 307
         }
       ]
     }

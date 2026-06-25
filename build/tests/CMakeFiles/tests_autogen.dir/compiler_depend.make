@@ -7,8 +7,11 @@ tests/tests_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindPackageMessage.cmake \
   C:/Program\ Files/CMake/share/cmake-4.3/Modules/GoogleTest.cmake \
+  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/ActionChangeOrdinalTests.cpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/CMakeLists.txt \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceTests.cpp \
+  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceUtiltsTests.cpp \
+  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/StreamsTests.cpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/TestUtils.hpp \
   C:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake \
   C:/msys64/mingw64/lib/cmake/GTest/GTestConfigVersion.cmake \
@@ -30,9 +33,15 @@ C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindGTest.cmake:
 
 C:/Program\ Files/CMake/share/cmake-4.3/Modules/FindPackageHandleStandardArgs.cmake:
 
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/ActionChangeOrdinalTests.cpp:
+
 C:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake:
 
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceTests.cpp:
+
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceUtiltsTests.cpp:
+
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/StreamsTests.cpp:
 
 C:/msys64/mingw64/lib/cmake/GTest/GTestTargets.cmake:
 

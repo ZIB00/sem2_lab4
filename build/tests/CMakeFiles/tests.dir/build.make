@@ -93,11 +93,41 @@ tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.s"
 	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests\tests_autogen\mocs_compilation.cpp -o CMakeFiles\tests.dir\tests_autogen\mocs_compilation.cpp.s
 
+tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj: tests/CMakeFiles/tests.dir/flags.make
+tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj: tests/CMakeFiles/tests.dir/includes_CXX.rsp
+tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj: C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/ActionChangeOrdinalTests.cpp
+tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj: tests/CMakeFiles/tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj -MF CMakeFiles\tests.dir\ActionChangeOrdinalTests.cpp.obj.d -o CMakeFiles\tests.dir\ActionChangeOrdinalTests.cpp.obj -c C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\ActionChangeOrdinalTests.cpp
+
+tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.i"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\ActionChangeOrdinalTests.cpp > CMakeFiles\tests.dir\ActionChangeOrdinalTests.cpp.i
+
+tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.s"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\ActionChangeOrdinalTests.cpp -o CMakeFiles\tests.dir\ActionChangeOrdinalTests.cpp.s
+
+tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj: tests/CMakeFiles/tests.dir/flags.make
+tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj: tests/CMakeFiles/tests.dir/includes_CXX.rsp
+tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj: C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceUtiltsTests.cpp
+tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj: tests/CMakeFiles/tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj -MF CMakeFiles\tests.dir\LazySequenceUtiltsTests.cpp.obj.d -o CMakeFiles\tests.dir\LazySequenceUtiltsTests.cpp.obj -c C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\LazySequenceUtiltsTests.cpp
+
+tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.i"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\LazySequenceUtiltsTests.cpp > CMakeFiles\tests.dir\LazySequenceUtiltsTests.cpp.i
+
+tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.s"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\LazySequenceUtiltsTests.cpp -o CMakeFiles\tests.dir\LazySequenceUtiltsTests.cpp.s
+
 tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: tests/CMakeFiles/tests.dir/flags.make
 tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: tests/CMakeFiles/tests.dir/includes_CXX.rsp
 tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceTests.cpp
 tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: tests/CMakeFiles/tests.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj"
 	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj -MF CMakeFiles\tests.dir\LazySequenceTests.cpp.obj.d -o CMakeFiles\tests.dir\LazySequenceTests.cpp.obj -c C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\LazySequenceTests.cpp
 
 tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.i: cmake_force
@@ -108,16 +138,37 @@ tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/LazySequenceTests.cpp.s"
 	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\LazySequenceTests.cpp -o CMakeFiles\tests.dir\LazySequenceTests.cpp.s
 
+tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj: tests/CMakeFiles/tests.dir/flags.make
+tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj: tests/CMakeFiles/tests.dir/includes_CXX.rsp
+tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj: C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/StreamsTests.cpp
+tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj: tests/CMakeFiles/tests.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj -MF CMakeFiles\tests.dir\StreamsTests.cpp.obj.d -o CMakeFiles\tests.dir\StreamsTests.cpp.obj -c C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\StreamsTests.cpp
+
+tests/CMakeFiles/tests.dir/StreamsTests.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/tests.dir/StreamsTests.cpp.i"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\StreamsTests.cpp > CMakeFiles\tests.dir\StreamsTests.cpp.i
+
+tests/CMakeFiles/tests.dir/StreamsTests.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/tests.dir/StreamsTests.cpp.s"
+	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && C:\msys64\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\StreamsTests.cpp -o CMakeFiles\tests.dir\StreamsTests.cpp.s
+
 # Object files for target tests
 tests_OBJECTS = \
 "CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.obj" \
-"CMakeFiles/tests.dir/LazySequenceTests.cpp.obj"
+"CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj" \
+"CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj" \
+"CMakeFiles/tests.dir/LazySequenceTests.cpp.obj" \
+"CMakeFiles/tests.dir/StreamsTests.cpp.obj"
 
 # External object files for target tests
 tests_EXTERNAL_OBJECTS =
 
 tests.exe: tests/CMakeFiles/tests.dir/tests_autogen/mocs_compilation.cpp.obj
+tests.exe: tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj
+tests.exe: tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj
 tests.exe: tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj
+tests.exe: tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj
 tests.exe: tests/CMakeFiles/tests.dir/build.make
 tests.exe: C:/msys64/mingw64/lib/libgtest_main.dll.a
 tests.exe: include/Sequences/libSequences.dll.a
@@ -125,7 +176,7 @@ tests.exe: C:/msys64/mingw64/lib/libgtest.dll.a
 tests.exe: tests/CMakeFiles/tests.dir/linkLibs.rsp
 tests.exe: tests/CMakeFiles/tests.dir/objects1.rsp
 tests.exe: tests/CMakeFiles/tests.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ..\tests.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ..\tests.exe"
 	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\tests.dir\link.txt --verbose=$(VERBOSE)
 	cd /d C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests && "C:\Program Files\CMake\bin\cmake.exe" -D TEST_TARGET=tests -D TEST_EXECUTABLE=C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests.exe -D TEST_EXECUTOR= -D TEST_WORKING_DIR=C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=tests_TESTS -D CTEST_FILE=C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests/tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_DISCOVERY_EXTRA_ARGS= -D TEST_XML_OUTPUT_DIR= -P "C:/Program Files/CMake/share/cmake-4.3/Modules/GoogleTestAddTests.cmake"
 

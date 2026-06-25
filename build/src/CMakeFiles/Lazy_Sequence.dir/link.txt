@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\Lazy_Sequence.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\Lazy_Sequence.dir/objects.a @CMakeFiles\Lazy_Sequence.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\Lazy_Sequence.dir/objects.a -Wl,--no-whole-archive -o ..\Lazy_Sequence.exe -Wl,--out-implib,libLazy_Sequence.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Lazy_Sequence.dir\linkLibs.rsp

@@ -1,7 +1,8 @@
-#include <cstddef>
 #include <gtest/gtest.h>
 #include <initializer_list>
 
+#include "LazySequence/LazySequence.hpp"
+#include "Sequences/other/Exceptions.hpp"
 #include "TestUtils.hpp"
 #include "../include/Sequences/sequences/ArraySequence.hpp"
 #include "../include/Sequences/sequences/ListSequence.hpp"
@@ -454,22 +455,56 @@ TEST(LazySequenceTest, SubsequenceInvalidRange) {
 }
 
 TEST(LazySequenceTest, AppendToInfiniteThrows) {
-    LazySequence<int> seq([](auto list) { return 1; }, std::make_shared<MutableListSequence<int>>());
+    LazySequence<int> seq([](auto list) { return 1; });
     
     EXPECT_THROW(seq.Append(52), OutOfRange);
 }
 
 TEST(LazySequenceTest, GetLastOnInfiniteThrows) {
-    LazySequence<int> seq([](auto list) { return 1; }, std::make_shared<MutableListSequence<int>>());
+    LazySequence<int> seq([](auto list) { return 1; });
     
     EXPECT_THROW(seq.GetLast(), OutOfRange);
 }
 
 TEST(LazySequenceTest, InfiniteConcatFiniteIsInfinite) {
-    LazySequence<int> seq1([](auto list) { return 1; }, std::make_shared<MutableListSequence<int>>());
+    LazySequence<int> seq1([](auto list) { return 1; });
     LazySequence<int> seq2(std::make_shared<MutableListSequence<int>>(std::initializer_list<int>{10, 20}));
     
     LazySequence<int> res = seq1.Concat(seq2);
 
     EXPECT_TRUE(res.GetLength().IsInfinite());
+}
+
+TEST(LazySequenceTest, GetNextWork) {
+    LazySequence<int> seq( [](auto list) { return 1; } );
+
+    EXPECT_EQ(seq.GetNext(), 1);
+}
+
+TEST(LazySequenceTest, GetNextManyCalls) {
+    LazySequence<size_t> seq([](auto list) { return (list->GetLength()); });
+    
+    seq.GetNext();
+    seq.GetNext();
+    seq.GetNext();
+
+    EXPECT_EQ(seq.GetNext(), 3);
+}
+
+TEST(LazySequenceTest, TryGetNextwork) {
+    LazySequence<size_t> seq([](auto list) { return (list->GetLength()); });
+
+    EXPECT_EQ(seq.TryGetNext().Value(), 0);
+}
+
+TEST(LazySequenceTest, TryGetNextworkWithEmptySequenceValueOr) {
+    LazySequence<size_t> seq(std::make_shared<MutableListSequence<size_t>>());
+
+    EXPECT_EQ(seq.TryGetNext().ValueOr(52), 52);
+}
+
+TEST(LazySequenceTest, TryGetNextworkWithEmptySequenceValue) {
+    LazySequence<size_t> seq(std::make_shared<MutableListSequence<size_t>>());
+
+    EXPECT_THROW(seq.TryGetNext().Value(), BadOptionalAccess);
 }

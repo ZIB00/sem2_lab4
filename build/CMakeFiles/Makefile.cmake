@@ -53,6 +53,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/4.3.2/CMakeRCCompiler.cmake"
   "CMakeFiles/4.3.2/CMakeSystem.cmake"
   "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/CMakeLists.txt"
+  "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/CMakeLists.txt"
   "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/CMakeLists.txt"
   "C:/msys64/mingw64/lib/cmake/GTest/GTestConfig.cmake"
   "C:/msys64/mingw64/lib/cmake/GTest/GTestConfigVersion.cmake"
@@ -253,6 +254,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "include/Sequences/CMakeFiles/CMakeDirectoryInformation.cmake"
   "tests/CMakeFiles/tests_autogen.dir/AutogenInfo.json"
   "tests/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/CMakeFiles/Lazy_Sequence_autogen.dir/AutogenInfo.json"
+  "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -263,4 +266,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "tests/CMakeFiles/tests.dir/DependInfo.cmake"
   "tests/CMakeFiles/tests_autogen_timestamp_deps.dir/DependInfo.cmake"
   "tests/CMakeFiles/tests_autogen.dir/DependInfo.cmake"
+  "src/CMakeFiles/Lazy_Sequence.dir/DependInfo.cmake"
+  "src/CMakeFiles/Lazy_Sequence_autogen_timestamp_deps.dir/DependInfo.cmake"
+  "src/CMakeFiles/Lazy_Sequence_autogen.dir/DependInfo.cmake"
   )

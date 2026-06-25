@@ -13,8 +13,62 @@
 },
 {
   "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\tests.dir\\ActionChangeOrdinalTests.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\ActionChangeOrdinalTests.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/ActionChangeOrdinalTests.cpp",
+  "output": "tests/CMakeFiles/tests.dir/ActionChangeOrdinalTests.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\tests.dir\\LazySequenceUtiltsTests.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceUtiltsTests.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceUtiltsTests.cpp",
+  "output": "tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests",
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\tests.dir\\LazySequenceTests.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\LazySequenceTests.cpp",
   "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceTests.cpp",
   "output": "tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DGTEST_LINKED_AS_SHARED_LIBRARY=1 @CMakeFiles/tests.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\tests.dir\\StreamsTests.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/StreamsTests.cpp",
+  "output": "tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/Lazy_Sequence.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\Lazy_Sequence.dir\\Lazy_Sequence_autogen\\mocs_compilation.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\build\\src\\Lazy_Sequence_autogen\\mocs_compilation.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src/Lazy_Sequence_autogen/mocs_compilation.cpp",
+  "output": "src/CMakeFiles/Lazy_Sequence.dir/Lazy_Sequence_autogen/mocs_compilation.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/Lazy_Sequence.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\Lazy_Sequence.dir\\main.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\src\\main.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/main.cpp",
+  "output": "src/CMakeFiles/Lazy_Sequence.dir/main.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/Lazy_Sequence.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\Lazy_Sequence.dir\\MainWindow.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\src\\MainWindow.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/MainWindow.cpp",
+  "output": "src/CMakeFiles/Lazy_Sequence.dir/MainWindow.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/Lazy_Sequence.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\Lazy_Sequence.dir\\TabBase.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\src\\TabBase.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/TabBase.cpp",
+  "output": "src/CMakeFiles/Lazy_Sequence.dir/TabBase.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/Lazy_Sequence.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\Lazy_Sequence.dir\\TabAlgebra.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\src\\TabAlgebra.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/TabAlgebra.cpp",
+  "output": "src/CMakeFiles/Lazy_Sequence.dir/TabAlgebra.cpp.obj"
+},
+{
+  "directory": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -DWINVER=0x0A00 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN32_WINNT=0x0A00 -D_WIN64 @CMakeFiles/Lazy_Sequence.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\Lazy_Sequence.dir\\TabOrdinals.cpp.obj -c C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\src\\TabOrdinals.cpp",
+  "file": "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/TabOrdinals.cpp",
+  "output": "src/CMakeFiles/Lazy_Sequence.dir/TabOrdinals.cpp.obj"
 }
 ]

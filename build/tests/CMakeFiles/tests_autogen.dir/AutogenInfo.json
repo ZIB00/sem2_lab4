@@ -88,7 +88,22 @@
 	"SOURCES" : 
 	[
 		[
+			"C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/ActionChangeOrdinalTests.cpp",
+			"MU",
+			null
+		],
+		[
 			"C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceTests.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/LazySequenceUtiltsTests.cpp",
+			"MU",
+			null
+		],
+		[
+			"C:/Program1/my_projects/my_programs_CPP/sem2_lab4/tests/StreamsTests.cpp",
 			"MU",
 			null
 		]

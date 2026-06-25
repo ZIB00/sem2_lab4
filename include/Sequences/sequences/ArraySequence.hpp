@@ -38,8 +38,8 @@ class ArraySequence : public Sequence<T>
 
         T GetFirst() override;
         T GetLast() override;
-        const T& Get(size_t index);
-        void Set( size_t index, T value);
+        const T& Get(size_t index) override;
+        void Set( size_t index, T value) override;
         Sequence<T>* GetSubsequence(size_t startIndex, size_t endIndex) override;
         size_t GetLength() override;
 

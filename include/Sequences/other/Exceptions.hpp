@@ -1,52 +1,63 @@
 #pragma once
 
-#include <stdexcept>
+#include <exception>
 #include <string>
 
-class InvalidArgument : public std::invalid_argument
+class BaseError : public std::exception
 {
-    public:
-        using std::invalid_argument::invalid_argument;
-};
-
-class OutOfRange : public std::out_of_range
-{
-    public:
-        using std::out_of_range::out_of_range;
-};
-
-class LogicError : public std::logic_error
-{
-    public:
-        using std::logic_error::logic_error;
-};
-
-class OtherError : public std::exception
-{
-    public:
-        using std::exception::exception;
-};
-
-class BadOptionalAccess : public std::exception 
-{
-    public:
+protected:
+    std::string message;
+public:
+    BaseError(const std::string& msg) : message(msg) {}
     const char* what() const noexcept override {
-        return "bad optional access: optional is empty";
+        return message.c_str();
     }
 };
 
-class NotSupportedException : public std::logic_error 
+class InvalidArgument : public BaseError
 {
-    public:
-    using std::logic_error::logic_error;
-    
-    const char* what() const noexcept override {
-        return "Not supported";
-    }
+public:
+    InvalidArgument(const std::string& msg) : BaseError("InvalidArgument: " + msg) {}
 };
 
-class EndOfStream : public std::logic_error 
+class OutOfRange : public BaseError
 {
-    public:
-    using std::logic_error::logic_error;
+public:
+    OutOfRange(const std::string& msg) : BaseError("OutOfRange: " + msg) {}
+};
+
+class LogicError : public BaseError
+{
+public:
+    LogicError(const std::string& msg) : BaseError("LogicError: " + msg) {}
+};
+
+class OtherError : public BaseError
+{
+public:
+    OtherError(const std::string& msg) : BaseError("OtherError: " + msg) {}
+};
+
+class BadOptionalAccess : public BaseError 
+{
+public:
+    BadOptionalAccess() : BaseError("bad optional access: optional is empty") {}
+};
+
+class NotSupportedException : public BaseError 
+{
+public:
+    NotSupportedException() : BaseError("Not supported") {}
+};
+
+class EndOfStream : public BaseError 
+{
+public:
+    EndOfStream(const std::string& msg) : BaseError("EndOfStream: " + msg) {}
+};
+
+class SourceIsNotOpen : public BaseError
+{
+public:
+    SourceIsNotOpen(const std::string& msg) : BaseError("SourceIsNotOpen: " + msg) {}
 };

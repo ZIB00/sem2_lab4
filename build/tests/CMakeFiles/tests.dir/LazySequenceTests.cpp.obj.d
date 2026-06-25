@@ -1,5 +1,6 @@
 tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: \
  C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\LazySequenceTests.cpp \
+ C:/msys64/mingw64/include/gtest/gtest.h \
  C:/msys64/mingw64/include/c++/15.2.0/cstddef \
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/c++config.h \
  C:/msys64/mingw64/include/c++/15.2.0/x86_64-w64-mingw32/bits/os_defines.h \
@@ -13,7 +14,6 @@ tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: \
  C:/msys64/mingw64/include/vadefs.h \
  C:/msys64/mingw64/include/sdks/_mingw_ddk.h \
  C:/msys64/mingw64/include/c++/15.2.0/bits/version.h \
- C:/msys64/mingw64/include/gtest/gtest.h \
  C:/msys64/mingw64/include/c++/15.2.0/cstdint \
  C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h \
  C:/msys64/mingw64/include/stdint.h \
@@ -271,7 +271,6 @@ tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: \
  C:/msys64/mingw64/include/gtest/gtest-typed-test.h \
  C:/msys64/mingw64/include/gtest/gtest_pred_impl.h \
  C:/msys64/mingw64/include/gtest/gtest_prod.h \
- C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\TestUtils.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/LazySequence.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ListSequence.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/LinkedList.hpp \
@@ -280,7 +279,9 @@ tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp \
+ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp \
- C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/ActionChangeCardinal.hpp \
+ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/ActionChangeOrdinal.hpp \
+ C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\TestUtils.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/DynamicArray.hpp
