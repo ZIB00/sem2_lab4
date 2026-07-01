@@ -4,8 +4,6 @@ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src/Lazy_Sequence_autoge
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/LazySequence.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp \
@@ -178,7 +176,6 @@ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/src/Lazy_Sequence_autoge
   C:/msys64/mingw64/include/c++/15.2.0/iomanip \
   C:/msys64/mingw64/include/c++/15.2.0/ios \
   C:/msys64/mingw64/include/c++/15.2.0/iosfwd \
-  C:/msys64/mingw64/include/c++/15.2.0/iostream \
   C:/msys64/mingw64/include/c++/15.2.0/istream \
   C:/msys64/mingw64/include/c++/15.2.0/iterator \
   C:/msys64/mingw64/include/c++/15.2.0/limits \

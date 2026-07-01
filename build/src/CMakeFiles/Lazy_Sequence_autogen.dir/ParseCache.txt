@@ -7,8 +7,6 @@ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/TabAlgebra.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/LazySequence.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp
- mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp
- mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp
@@ -182,7 +180,6 @@ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/TabAlgebra.hpp
  mdp:C:/msys64/mingw64/include/c++/15.2.0/iomanip
  mdp:C:/msys64/mingw64/include/c++/15.2.0/ios
  mdp:C:/msys64/mingw64/include/c++/15.2.0/iosfwd
- mdp:C:/msys64/mingw64/include/c++/15.2.0/iostream
  mdp:C:/msys64/mingw64/include/c++/15.2.0/istream
  mdp:C:/msys64/mingw64/include/c++/15.2.0/iterator
  mdp:C:/msys64/mingw64/include/c++/15.2.0/limits
@@ -875,8 +872,6 @@ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/TabBase.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/LazySequence.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp
- mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp
- mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp
  mdp:C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp
@@ -1050,7 +1045,6 @@ C:/Program1/my_projects/my_programs_CPP/sem2_lab4/src/TabBase.hpp
  mdp:C:/msys64/mingw64/include/c++/15.2.0/iomanip
  mdp:C:/msys64/mingw64/include/c++/15.2.0/ios
  mdp:C:/msys64/mingw64/include/c++/15.2.0/iosfwd
- mdp:C:/msys64/mingw64/include/c++/15.2.0/iostream
  mdp:C:/msys64/mingw64/include/c++/15.2.0/istream
  mdp:C:/msys64/mingw64/include/c++/15.2.0/iterator
  mdp:C:/msys64/mingw64/include/c++/15.2.0/limits

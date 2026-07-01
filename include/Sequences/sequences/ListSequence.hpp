@@ -34,8 +34,8 @@ class ListSequence : public Sequence<T>
 
         T GetFirst() override;
         T GetLast() override;
-        const T& Get(size_t index) override;
-        void Set(size_t index, T value) override;
+        const T& Get(size_t index);
+        void Set(size_t index, T value);
         Sequence<T>* GetSubsequence(size_t startIndex, size_t endIndex) override;
         size_t GetLength() override;
 
@@ -59,7 +59,7 @@ class ListSequenceEnumerator : public IEnumerator<T>
     public:
         ListSequenceEnumerator(ListSequence<T>* sequence);
 
-        T GetCurrent() override;
+        T    Current() override;
         bool MoveNext() override;
         void Reset() override;
 };
@@ -121,9 +121,9 @@ void ListSequence<T>::SetItems(T* items, size_t count)
 template<class T>
 void ListSequence<T>::SetItems(std::initializer_list<T> items)
 {
-    LinkedList<T>* newItems = new LinkedList<T>(items);
+    LinkedList<T>* copiedItems = new LinkedList<T>(items);
     delete this->items;
-    this->items = newItems;
+    this->items = copiedItems;
 }
 
 template<class T>
@@ -342,7 +342,7 @@ ListSequenceEnumerator<T>::ListSequenceEnumerator(ListSequence<T>* sequence)
 }
 
 template<class T>
-T ListSequenceEnumerator<T>::GetCurrent()
+T ListSequenceEnumerator<T>::Current()
 {
     if (position < 0 || position >= sequence->GetLength()) throw OutOfRange("Enumerator is out of bounds");
 

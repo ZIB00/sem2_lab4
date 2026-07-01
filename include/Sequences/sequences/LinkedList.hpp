@@ -22,22 +22,24 @@ class LinkedList
         LinkedList(T* items, size_t count);
         LinkedList();
         LinkedList(const LinkedList<T>& list);
+        LinkedList(LinkedList<T>&& list);
         LinkedList(std::initializer_list<T> items);
         ~LinkedList();
 
         LinkedList<T>& operator=(const LinkedList<T>& list);
+        LinkedList<T>& operator=(LinkedList<T>&& list);
         T& operator[](size_t index);
         const T& operator[](size_t index) const;
         LinkedList<T>* operator+(const LinkedList<T>* other);
         bool operator==(const LinkedList<T>* other);
         bool operator!=(const LinkedList<T>* other);
 
-        T GetFirst();
-        T GetLast();
-        const T& Get(size_t index);
+        T GetFirst() const;
+        T GetLast() const;
+        const T& Get(size_t index) const;
         void Set(size_t index, T value);
         LinkedList<T>* GetSubList(size_t startIndex, size_t endIndex);
-        size_t GetLength();
+        size_t GetLength() const;
 
         void Append(T item);
         void Prepend(T item);
@@ -45,6 +47,7 @@ class LinkedList
         LinkedList<T>* Concat(const LinkedList<T>* list);
 
         void Clear();
+        void PopBack();
 };
 
 #include <string>
@@ -121,6 +124,16 @@ LinkedList<T>::LinkedList(const LinkedList<T>& list)
 }
 
 template<class T>
+LinkedList<T>::LinkedList(LinkedList<T>&& list)
+{
+    this->head = list.head;
+    this->tail = list.tail;
+    
+    list.head = nullptr;
+    list.tail = nullptr;
+}
+
+template<class T>
 LinkedList<T>::LinkedList(std::initializer_list<T> items) : head(nullptr), tail(nullptr) 
 {
     try {
@@ -155,6 +168,22 @@ LinkedList<T>& LinkedList<T>::operator=(const LinkedList<T>& list)
 
         copy.head = tempHead;
         copy.tail = tempTail;
+    }
+
+    return *this;
+}
+
+template<class T>
+LinkedList<T>& LinkedList<T>::operator=(LinkedList<T>&& list)
+{
+    if (this != &list) {
+        this->Clear();
+        
+        this->head = list.head;
+        this->tail = list.tail;
+        
+        list.head = nullptr;
+        list.tail = nullptr;
     }
 
     return *this;
@@ -235,7 +264,7 @@ bool LinkedList<T>::operator!=(const LinkedList<T>* other)
 }
 
 template<class T>
-T LinkedList<T>::GetFirst()
+T LinkedList<T>::GetFirst() const
 {
     if (this->head == nullptr) {
         throw OutOfRange("LinkedList::GetFirst - Out of Range: The list is completely empty (head is null).");
@@ -245,7 +274,7 @@ T LinkedList<T>::GetFirst()
 }
 
 template<class T>
-T LinkedList<T>::GetLast()
+T LinkedList<T>::GetLast() const
 {
     if (this->tail == nullptr) {
         throw OutOfRange("LinkedList::GetLast - Out of Range: The list is completely empty (tail is null).");
@@ -255,7 +284,7 @@ T LinkedList<T>::GetLast()
 }
 
 template<class T>
-const T& LinkedList<T>::Get(size_t index)
+const T& LinkedList<T>::Get(size_t index) const
 {
     Node* current = this->head;
     size_t currentIndex = 0;
@@ -328,7 +357,7 @@ LinkedList<T>* LinkedList<T>::GetSubList(size_t startIndex, size_t endIndex)
 }
 
 template<class T>
-size_t LinkedList<T>::GetLength()
+size_t LinkedList<T>::GetLength() const
 {
     size_t length = 0;
     Node* current = this->head;
@@ -423,4 +452,18 @@ LinkedList<T>* LinkedList<T>::Concat(const LinkedList<T>* list)
     }
 
     return result;
+}
+
+template<class T>
+void LinkedList<T>::PopBack()
+{
+    if (this->head == nullptr) return;
+    if (this->tail == this->head) {
+        this->tail = this->head->next;
+    }
+    
+    Node* temp = this->head;
+    this->head = this->head->next;
+
+    delete temp;
 }

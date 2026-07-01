@@ -19,17 +19,52 @@
 	ProcessorCacheSize="-1"
 	NumberOfLogicalCPU="8"
 	NumberOfPhysicalCPU="4"
-	TotalVirtualMemory="30404"
+	TotalVirtualMemory="30403"
 	TotalPhysicalMemory="16320"
 	LogicalProcessorsPerPhysical="2"
 	ProcessorClockFrequency="3401.000000"
 	>
 	<Testing>
-		<StartDateTime>Jun 25 03:28 RTZ 2 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</StartDateTime>
-		<StartTestTime>1782347338</StartTestTime>
-		<TestList/>
-		<EndDateTime>Jun 25 03:28 RTZ 2 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</EndDateTime>
-		<EndTestTime>1782347339</EndTestTime>
+		<StartDateTime>Jul 01 03:16 RTZ 2 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</StartDateTime>
+		<StartTestTime>1782864993</StartTestTime>
+		<TestList>
+			<Test>./tests/FileReadStreamTest.ReadFromDiskWorks</Test>
+		</TestList>
+		<Test Status="failed">
+			<Name>FileReadStreamTest.ReadFromDiskWorks</Name>
+			<Path>./tests</Path>
+			<FullName>./tests/FileReadStreamTest.ReadFromDiskWorks</FullName>
+			<FullCommandLine>C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests.exe "--gtest_filter=FileReadStreamTest.ReadFromDiskWorks" "--gtest_also_run_disabled_tests"</FullCommandLine>
+			<StartTestTime>1782864993.119012</StartTestTime>
+			<Results>
+				<NamedMeasurement type="text/string" name="Exit Code">
+					<Value>Failed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Exit Value">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.018256</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>C:\Program1\my_projects\my_programs_CPP\sem2_lab4\build\tests.exe "--gtest_filter=FileReadStreamTest.ReadFromDiskWorks" "--gtest_also_run_disabled_tests"</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Environment">
+					<Value>#CTEST_RESOURCE_GROUP_COUNT=</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value encoding="base64" compression="gzip">eJyVUlFrGkEQft9fMY8K9fRCQXqQh9RoKLRB1JAHFVnPVbfZu73u7iXNmwmFPLTQl/4QkdraFO1f2PtHnbuTEFMKZuG42ZlvvvlmdlpxGPJwAgHlYaEIYyUDqHnld+XXZa388kTKiWCGaVNyHbfqVB55ckBqDdJsx/fJqTTMg5MMAh2MwJgLwxQcQoML1mJ01DaK0SCNOem1gQWPub44l+pCk+7hw+lDayvNBZMxpdK2to65YQ7plh5OH06EHFKRx1l4yZUMAxYilplSHD0BP+b8VxnpQuvsFLLT3095zes1lZwoGri94HoQKfme+UZv7dSvB7Vms6dZcDAQdPiylwrQvZxUp6za8aPIc19VPGhQLmLFSP1jhCxsBOxDTAU31yDHYKZMM7ikImbaIwA6o8g0FYok1Xw+5f4UuPaggvdqtUrsN7uxv+0Pu7YbsPd2k8ySmV3a++Q2cyU3yZ1dJbfJZ7uwc/x/Qc9XsCuw3+0yucFvZld2jhwr+xO5Fk+RfzLIAkNLQMQaY3dYYI14dGASJJ8w/xcyzAkOGBpHb97Wj/cdMBQOINDF57xingJGGiqKZL9lMYyq0khehbur+L8VBEVDZ7cOdtY8arfzzioZVju7/eYML0Bwnb7tkAl55T1/JIQg0zalU293yF84SHDW====</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>Jul 01 03:16 RTZ 2 ([NON-UTF-8-BYTE-0xE7][NON-UTF-8-BYTE-0xE8][NON-UTF-8-BYTE-0xEC][NON-UTF-8-BYTE-0xE0])</EndDateTime>
+		<EndTestTime>1782864993</EndTestTime>
 		<ElapsedMinutes>0</ElapsedMinutes>
 	</Testing>
 </Site>

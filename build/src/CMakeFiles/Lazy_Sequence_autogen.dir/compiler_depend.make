@@ -7,8 +7,6 @@ src/Lazy_Sequence_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/LazySequence.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp \
@@ -191,7 +189,6 @@ src/Lazy_Sequence_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/msys64/mingw64/include/c++/15.2.0/iomanip \
   C:/msys64/mingw64/include/c++/15.2.0/ios \
   C:/msys64/mingw64/include/c++/15.2.0/iosfwd \
-  C:/msys64/mingw64/include/c++/15.2.0/iostream \
   C:/msys64/mingw64/include/c++/15.2.0/istream \
   C:/msys64/mingw64/include/c++/15.2.0/iterator \
   C:/msys64/mingw64/include/c++/15.2.0/limits \
@@ -500,25 +497,37 @@ src/Lazy_Sequence_autogen/timestamp: C:/Program\ Files/CMake/bin/cmake.exe \
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdbool.h
 
 
+C:/msys64/mingw64/include/qt6/QtGui/qtextoption.h:
+
+C:/msys64/mingw64/include/qt6/QtGui/qtextdocument.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h:
+
+C:/msys64/mingw64/include/qt6/QtCore/qxptype_traits.h:
+
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/charconv.h:
+
+C:/msys64/mingw64/include/qt6/QtWidgets/QLineEdit:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/basic_ios.tcc:
+
 C:/Program\ Files/CMake/bin/cmake.exe:
-
-C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h:
-
-C:/msys64/mingw64/include/qt6/QtGui/qfontmetrics.h:
-
-C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp:
 
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/ActionChangeOrdinal.hpp:
 
 src/Lazy_Sequence_autogen/moc_predefs.h:
 
-C:/msys64/mingw64/include/qt6/QtCore/qiodevice.h:
+C:/msys64/mingw64/include/qt6/QtCore/qstringtokenizer.h:
 
-C:/msys64/mingw64/include/c++/15.2.0/bits/invoke.h:
+C:/msys64/mingw64/include/_mingw_stat64.h:
 
-C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h:
+C:/msys64/mingw64/include/qt6/QtCore/qregularexpression.h:
 
-C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp:
+C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_base.h:
+
+C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp:
 
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp:
 
@@ -564,26 +573,6 @@ C:/msys64/mingw64/include/c++/15.2.0/locale:
 
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp:
 
-C:/msys64/mingw64/include/qt6/QtCore/qxptype_traits.h:
-
-C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp:
-
-C:/msys64/mingw64/include/c++/15.2.0/bits/charconv.h:
-
-C:/msys64/mingw64/include/qt6/QtWidgets/QLineEdit:
-
-C:/msys64/mingw64/include/c++/15.2.0/bits/basic_ios.tcc:
-
-C:/msys64/mingw64/include/qt6/QtCore/qstringtokenizer.h:
-
-C:/msys64/mingw64/include/_mingw_stat64.h:
-
-C:/msys64/mingw64/include/qt6/QtCore/qregularexpression.h:
-
-C:/msys64/mingw64/include/c++/15.2.0/bits/shared_ptr_base.h:
-
-C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp:
-
 C:/msys64/mingw64/include/c++/15.2.0/bits/chrono.h:
 
 C:/msys64/mingw64/include/wchar.h:
@@ -597,6 +586,8 @@ C:/msys64/mingw64/include/qt6/QtWidgets/qmainwindow.h:
 C:/msys64/mingw64/include/_mingw.h:
 
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/DynamicArray.hpp:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h:
 
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ListSequence.hpp:
 
@@ -698,9 +689,17 @@ C:/msys64/mingw64/include/c++/15.2.0/bits/allocator.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_base.h:
 
+C:/msys64/mingw64/include/qt6/QtCore/qiodevice.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/invoke.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_lockfree_defines.h:
+
 C:/msys64/mingw64/include/qt6/QtCore/qvariant.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/atomic_wait.h:
+
+C:/msys64/mingw64/include/c++/15.2.0/bits/basic_string.h:
 
 C:/msys64/mingw64/include/stdint.h:
 
@@ -725,14 +724,6 @@ C:/msys64/mingw64/include/c++/15.2.0/bits/cxxabi_init_exception.h:
 C:/msys64/mingw64/include/c++/15.2.0/bits/enable_special_members.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h:
-
-C:/msys64/mingw64/include/qt6/QtGui/qtextoption.h:
-
-C:/msys64/mingw64/include/qt6/QtGui/qtextdocument.h:
-
-C:/msys64/mingw64/include/c++/15.2.0/bits/exception_defines.h:
-
-C:/msys64/mingw64/include/c++/15.2.0/bits/exception_ptr.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/formatfwd.h:
 
@@ -957,8 +948,6 @@ C:/msys64/mingw64/include/sys/types.h:
 C:/msys64/mingw64/include/qt6/QtCore/qutf8stringview.h:
 
 C:/msys64/mingw64/include/qt6/QtCore/qflags.h:
-
-C:/msys64/mingw64/include/c++/15.2.0/iostream:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/unordered_map.h:
 
@@ -1415,6 +1404,8 @@ C:/msys64/mingw64/include/qt6/QtGui/qbrush.h:
 C:/msys64/mingw64/include/qt6/QtGui/qcolor.h:
 
 C:/msys64/mingw64/include/qt6/QtGui/qfont.h:
+
+C:/msys64/mingw64/include/qt6/QtGui/qfontmetrics.h:
 
 C:/msys64/mingw64/include/qt6/QtGui/qicon.h:
 

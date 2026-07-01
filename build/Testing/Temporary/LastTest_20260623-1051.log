@@ -1,3 +1,41 @@
-Start testing: Jun 25 03:28 RTZ 2 (����)
+Start testing: Jul 01 03:16 RTZ 2 (����)
 ----------------------------------------------------------
-End testing: Jun 25 03:28 RTZ 2 (����)
+20/153 Testing: FileReadStreamTest.ReadFromDiskWorks
+20/153 Test: FileReadStreamTest.ReadFromDiskWorks
+Command: "C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests.exe" "--gtest_filter=FileReadStreamTest.ReadFromDiskWorks" "--gtest_also_run_disabled_tests"
+Directory: C:/Program1/my_projects/my_programs_CPP/sem2_lab4/build/tests
+"FileReadStreamTest.ReadFromDiskWorks" start time: Jul 01 03:16 RTZ 2 (����)
+Output:
+----------------------------------------------------------
+Running main() from C:/M/B/src/googletest-1.17.0/googletest/src/gtest_main.cc
+Note: Google Test filter = FileReadStreamTest.ReadFromDiskWorks
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from FileReadStreamTest
+[ RUN      ] FileReadStreamTest.ReadFromDiskWorks
+C:\Program1\my_projects\my_programs_CPP\sem2_lab4\tests\StreamsTests.cpp:190: Failure
+Expected equality of these values:
+  stream.Read()
+    Which is: 0
+  777
+Должно корректно считываться и десериализовываться первое значение из файла
+
+[  FAILED  ] FileReadStreamTest.ReadFromDiskWorks (2 ms)
+[----------] 1 test from FileReadStreamTest (2 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (2 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] FileReadStreamTest.ReadFromDiskWorks
+
+ 1 FAILED TEST
+<end of output>
+Test time =   0.02 sec
+----------------------------------------------------------
+Test Failed.
+"FileReadStreamTest.ReadFromDiskWorks" end time: Jul 01 03:16 RTZ 2 (����)
+"FileReadStreamTest.ReadFromDiskWorks" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Jul 01 03:16 RTZ 2 (����)

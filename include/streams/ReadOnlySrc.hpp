@@ -79,7 +79,8 @@ private:
 
 public:
     FileReadSrc( const std::string& filePath, std::function<T(const std::string& str)> deser ) 
-        : filePath(filePath), deser(deser), currentIndex(0) {};
+        : filePath(filePath), deser(deser), currentIndex(0) { in.open(filePath); }
+    ~FileReadSrc() { in.close(); }
 
     bool IsEndOfStream() const override { return in.fail(); }
     T Read() override { 
@@ -104,17 +105,6 @@ public:
             ++currentIndex; 
         }
         return currentIndex;
-    }
-
-    void Open() override { 
-        in.open(filePath);
-        if( !in.is_open() ) throw OtherError("File did not open");
-        in >> part;
-    }
-    void Close() override { 
-        in.clear();
-        in.close(); 
-        if( in.fail() ) throw OtherError("File did not close");
     }
 };
 

@@ -6,9 +6,7 @@
 #include <memory>
 #include <functional>
 #include <string>
-#include <sstream>
 
-#include "../LazySequence/LazySequence.hpp"
 #include "../Sequences/sequences/Sequence.hpp"
 #include "IStreams.hpp"
 
@@ -42,7 +40,12 @@ private:
 
 public:
     FileWriteSrc( const std::string& filePath, std::function<std::string(const T& item)> ser ) 
-        : ser(ser), filePath(filePath), currentIndex(0) {}
+        : ser(ser), filePath(filePath), currentIndex(0) {
+            out.open(filePath);
+        }
+    ~FileWriteSrc() {
+        out.close();
+    }
     
     size_t GetPosition() const override { return currentIndex; }
 
@@ -50,7 +53,4 @@ public:
         out << ser(item) << " ";
         return ++currentIndex;
     }
-
-    void Open()  override { out.open(filePath); }
-    void Close() override { out.close(); }
 };

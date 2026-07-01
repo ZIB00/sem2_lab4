@@ -304,8 +304,6 @@ tests/CMakeFiles/tests.dir/LazySequenceTests.cpp.obj: C:/Program1/my_projects/my
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/LazySequence.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp \
@@ -598,8 +596,6 @@ tests/CMakeFiles/tests.dir/LazySequenceUtiltsTests.cpp.obj: C:/Program1/my_proje
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/LazySequence.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp \
@@ -892,8 +888,6 @@ tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj: C:/Program1/my_projects/my_prog
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/LazySequence.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp \
-  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp \
   C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp \
@@ -1805,10 +1799,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/stdint.h:
 C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h:
 
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp:
-
-C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp:
-
-C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp:
 
 C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/DynamicArray.hpp:
 

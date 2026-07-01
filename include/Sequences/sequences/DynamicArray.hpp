@@ -10,6 +10,7 @@ class DynamicArray
         size_t size;
 
     public:
+        DynamicArray();
         DynamicArray(T* items, size_t count);
         DynamicArray(size_t size);
         DynamicArray(const DynamicArray<T>& dynamicArray);
@@ -31,11 +32,16 @@ class DynamicArray
 };
 
 template<class T>
+DynamicArray<T>::DynamicArray() : data(new T[0]), size(0)
+{
+}
+
+template<class T>
 DynamicArray<T>::DynamicArray(T* items, size_t count)
 {
     if (count == 0) {
-        this->data = nullptr;
-        this->size = 0;
+        this->data = new T[count];
+        this->size = count;
         return;
     }
 
@@ -58,16 +64,8 @@ DynamicArray<T>::DynamicArray(T* items, size_t count)
 }
 
 template<class T>
-DynamicArray<T>::DynamicArray(size_t size)
+DynamicArray<T>::DynamicArray(size_t size) : data(new T[size]), size(size)
 {
-    if (size == 0) {
-        this->data = nullptr;
-        this->size = 0;
-        return;
-    }
-
-    this->data = new T[size];
-    this->size = size;
 }
 
 template<class T>

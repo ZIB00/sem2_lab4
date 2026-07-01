@@ -8,7 +8,7 @@ class BaseError : public std::exception
 protected:
     std::string message;
 public:
-    BaseError(const std::string& msg) : message(msg) {}
+    BaseError(const std::string& message) : message(message) {}
     const char* what() const noexcept override {
         return message.c_str();
     }

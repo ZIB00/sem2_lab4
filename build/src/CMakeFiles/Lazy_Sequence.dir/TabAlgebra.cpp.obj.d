@@ -491,11 +491,8 @@ src/CMakeFiles/Lazy_Sequence.dir/TabAlgebra.cpp.obj: \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/LinkedList.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/Sequence.hpp \
- C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp \
- C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp \
- C:/msys64/mingw64/include/c++/15.2.0/iostream \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/ActionChangeOrdinal.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/ArraySequence.hpp \

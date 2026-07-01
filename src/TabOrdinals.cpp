@@ -11,6 +11,8 @@
 
 #include "TabOrdinals.hpp"
 
+constexpr int MAX_NUM = 9999;
+
 TabOrdinals::TabOrdinals(QTextEdit *sharedLogArea, QWidget *parent)
     : QWidget(parent), logArea(sharedLogArea), currentResult(0), hasResult(false)
 {
@@ -52,10 +54,10 @@ void TabOrdinals::setupGroupA(QGroupBox *box)
     QGridLayout *grid = new QGridLayout(box);
 
     spinInfA = new QSpinBox(box);
-    spinInfA->setRange(0, 9999);
+    spinInfA->setRange(0, MAX_NUM);
 
     spinFinA = new QSpinBox(box);
-    spinFinA->setRange(0, 9999);
+    spinFinA->setRange(0, MAX_NUM);
 
     labelDisplayA = new QLabel("0", box);
     labelDisplayA->setAlignment(Qt::AlignCenter);
@@ -73,10 +75,10 @@ void TabOrdinals::setupGroupB(QGroupBox *box)
     QGridLayout *grid = new QGridLayout(box);
 
     spinInfB = new QSpinBox(box);
-    spinInfB->setRange(0, 9999);
+    spinInfB->setRange(0, MAX_NUM);
 
     spinFinB = new QSpinBox(box);
-    spinFinB->setRange(0, 9999);
+    spinFinB->setRange(0, MAX_NUM);
 
     labelDisplayB = new QLabel("0", box);
     labelDisplayB->setAlignment(Qt::AlignCenter);

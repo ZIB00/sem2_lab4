@@ -1,34 +1,10 @@
 #pragma once
 
-#include "../other/ICollection.hpp"
-#include "../other/IEnumerable.hpp"
-
-template <class T1, class T2>
-struct Pair {
-    T1 first;
-    T2 second;
-
-    Pair() {
-        first = T1();
-        second = T2();
-    } 
-    
-    Pair(T1 f, T2 s) {
-        first = f;
-        second = s;
-    }
-
-    bool operator==(const Pair<T1, T2>& other) const {
-        return first == other.first && second == other.second;
-    }
-
-    bool operator!=(const Pair<T1, T2>& other) const {
-        return !(*this == other);
-    }
-};
+#include <cstddef>
+#include "../other/IEnumerator.hpp"
 
 template<class T>
-class Sequence : public ICollection<T>, public IEnumerable<T>
+class Sequence
 {
     public:
         virtual ~Sequence() = default;

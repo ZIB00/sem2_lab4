@@ -29,25 +29,13 @@ public:
     virtual QString ZipWith(std::shared_ptr<ISequenceWrapper> other, size_t count) = 0;
 };
 
-inline int ParseValue(const QString& text, int)
-{
-    return text.toInt();
-}
+inline int ParseValue(const QString& text, int) { return text.toInt(); }
 
-inline double ParseValue(const QString& text, double)
-{
-    return text.toDouble();
-}
+inline double ParseValue(const QString& text, double) { return text.toDouble(); }
 
-inline QString FormatValue(int value)
-{
-    return QString::number(value);
-}
+inline QString FormatValue(int value) { return QString::number(value); }
 
-inline QString FormatValue(double value)
-{
-    return QString::number(value, 'g', 10);
-}
+inline QString FormatValue(double value) { return QString::number(value, 'g', 10); }
 
 template <typename T>
 class SequenceWrapperImpl : public ISequenceWrapper
@@ -76,7 +64,7 @@ private:
             try {
                 auto p = zipped.Get(i);
                 result += "(" + FormatValue(p.first) + ", " + FormatValue(p.second) + ") ";
-            } catch (const BaseError&) {
+            } catch (const BaseError& e) {
                 break;
             }
         }
@@ -84,47 +72,34 @@ private:
     }
 
 public:
-    explicit SequenceWrapperImpl(std::shared_ptr<LazySequence<T>> sequence) : seq(sequence) {}
+    SequenceWrapperImpl(std::shared_ptr<LazySequence<T>> sequence) : seq(sequence) {}
 
-    std::shared_ptr<LazySequence<T>> GetRawSequence()
-    {
-        return seq;
-    }
+    std::shared_ptr<LazySequence<T>> GetRawSequence() { return seq; }
 
-    QString GetFirst() override
-    {
-        return FormatValue(seq->GetFirst());
-    }
-
-    QString GetLast() override
-    {
-        return FormatValue(seq->GetLast());
-    }
-
-    QString Get(size_t index) override
-    {
-        return FormatValue(seq->Get(index));
-    }
+    QString GetFirst() override { return FormatValue(seq->GetFirst()); }
+    QString GetLast() override { return FormatValue(seq->GetLast()); }
+    QString Get(size_t index) override { return FormatValue(seq->Get(index)); }
 
     bool IsLengthInfinite() override
     {
-        try { return seq->GetLength().IsInfinite(); } catch (...) { return false; }
+        try { 
+            return seq->GetLength().IsInfinite(); 
+        } catch (...) { 
+            return false; 
+        }
     }
 
     size_t GetLengthSize() override
     {
-        try { return seq->GetLength().GetSize(); } catch (...) { return 0; }
+        try { 
+            return seq->GetLength().GetSize(); 
+        } catch (...) { 
+            return 0; 
+        }
     }
 
-    size_t GetMaterializedCount() override
-    {
-        return seq->GetMaterializedCount();
-    }
-
-    QString GetNext() override
-    {
-        return FormatValue(seq->GetNext());
-    }
+    size_t GetMaterializedCount() override { return seq->GetMaterializedCount(); }
+    QString GetNext() override { return FormatValue(seq->GetNext()); }
 
     bool TryGetNext(QString& outValue) override
     {

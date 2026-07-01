@@ -25,72 +25,6 @@ void CreateStreamFile(const std::string& path, const std::string& content) {
 }
 
 
-TEST(ReadOnlyStreamStateTest, ReadThrowsWhenClosed) {
-    ReadOnlyStream<int> stream("test_read.txt", StreamStrToIntDeser);
-    
-    EXPECT_THROW(stream.Read(), SourceIsNotOpen) << "Чтение закрытого файлового потока должно вызывать SourceIsNotOpen";
-}
-
-TEST(ReadOnlyStreamStateTest, GetPositionThrowsWhenClosed) {
-    ReadOnlyStream<int> stream("test_read.txt", StreamStrToIntDeser);
-    
-    EXPECT_THROW(stream.GetPosition(), SourceIsNotOpen) << "Получение позиции закрытого файлового потока должно вызывать SourceIsNotOpen";
-}
-
-TEST(ReadOnlyStreamStateTest, SeekThrowsWhenClosed) {
-    ReadOnlyStream<int> stream("test_read.txt", StreamStrToIntDeser);
-    
-    EXPECT_THROW(stream.Seek(0), SourceIsNotOpen) << "Навигация в закрытом потоке должна вызывать SourceIsNotOpen";
-}
-
-TEST(ReadOnlyStreamStateTest, CloseThrowsWhenClosed) {
-    ReadOnlyStream<int> stream("test_read.txt", StreamStrToIntDeser);
-    
-    EXPECT_THROW(stream.Close(), SourceIsNotOpen) << "Повторное закрытие закрытого потока должно вызывать SourceIsNotOpen";
-}
-
-TEST(ReadOnlyStreamStateTest, DoubleOpenThrowsLogicError) {
-    std::shared_ptr<Sequence<int>> seq = std::make_shared<MutableListSequence<int>>();
-    ReadOnlyStream<int> stream(seq);
-    
-    EXPECT_THROW(stream.Open(), LogicError) << "Открытие уже открытого потока (из последовательности) должно вызывать LogicError";
-}
-
-
-TEST(WriteOnlyStreamStateTest, WriteThrowsWhenClosed) {
-    WriteOnlyStream<int> stream("test_write.txt", StreamIntToStrSer);
-    
-    EXPECT_THROW(stream.Write(52), SourceIsNotOpen) << "Запись в закрытый поток должна вызывать SourceIsNotOpen";
-}
-
-TEST(WriteOnlyStreamStateTest, GetPositionThrowsWhenClosedWrite) {
-    WriteOnlyStream<int> stream("test_write.txt", StreamIntToStrSer);
-    
-    EXPECT_THROW(stream.GetPosition(), SourceIsNotOpen) << "Получение позиции закрытого потока записи должно вызывать SourceIsNotOpen";
-}
-
-TEST(WriteOnlyStreamStateTest, CloseThrowsWhenClosedWrite) {
-    WriteOnlyStream<int> stream("test_write.txt", StreamIntToStrSer);
-    
-    EXPECT_THROW(stream.Close(), SourceIsNotOpen) << "Повторное закрытие закрытого потока записи должно вызывать SourceIsNotOpen";
-}
-
-TEST(WriteOnlyStreamStateTest, DoubleOpenThrowsLogicErrorWrite) {
-    std::shared_ptr<Sequence<int>> seq = std::make_shared<MutableListSequence<int>>();
-    WriteOnlyStream<int> stream(seq);
-    
-    EXPECT_THROW(stream.Open(), LogicError) << "Открытие уже открытого потока записи должно вызывать LogicError";
-}
-
-TEST(WriteOnlyStreamStateTest, CloseTransitionsStateCorrectlyWrite) {
-    std::shared_ptr<Sequence<int>> seq = std::make_shared<MutableListSequence<int>>();
-    WriteOnlyStream<int> stream(seq);
-    stream.Close();
-    
-    EXPECT_THROW(stream.Write(1), SourceIsNotOpen) << "После Close() состояние потока записи должно стать закрытым";
-}
-
-
 TEST(SeqReadStreamTest, InitialPositionIsZero) {
     std::shared_ptr<Sequence<int>> seq = std::make_shared<MutableListSequence<int>>(std::initializer_list<int>{10, 20});
     ReadOnlyStream<int> stream(seq);
@@ -252,7 +186,6 @@ TEST(LazySeqReadStreamTest, FiniteLazySeekClampsToBound) {
 TEST(FileReadStreamTest, ReadFromDiskWorks) {
     CreateStreamFile("test_file_read_data.txt", "777 888");
     ReadOnlyStream<int> stream("test_file_read_data.txt", StreamStrToIntDeser);
-    stream.Open();
     
     EXPECT_EQ(stream.Read(), 777) << "Должно корректно считываться и десериализовываться первое значение из файла";
 }
@@ -260,7 +193,6 @@ TEST(FileReadStreamTest, ReadFromDiskWorks) {
 TEST(FileReadStreamTest, EOFTriggeredCorrectly) {
     CreateStreamFile("test_file_read_eof.txt", "777");
     ReadOnlyStream<int> stream("test_file_read_eof.txt", StreamStrToIntDeser);
-    stream.Open();
     stream.Read();
     
     EXPECT_TRUE(stream.IsEndOfStream()) << "После прочтения последнего элемента файла IsEndOfStream должен быть true";
@@ -269,7 +201,6 @@ TEST(FileReadStreamTest, EOFTriggeredCorrectly) {
 TEST(FileReadStreamTest, ReadThrowsAtEOF) {
     CreateStreamFile("test_file_read_throw.txt", "777");
     ReadOnlyStream<int> stream("test_file_read_throw.txt", StreamStrToIntDeser);
-    stream.Open();
     stream.Read();
     
     EXPECT_THROW(stream.Read(), EndOfStream) << "Попытка прочитать из файла после EOF должна вызывать EndOfStream";
@@ -278,7 +209,6 @@ TEST(FileReadStreamTest, ReadThrowsAtEOF) {
 TEST(FileReadStreamTest, SeekForwardSkipsTokens) {
     CreateStreamFile("test_file_read_seek.txt", "11 22 33");
     ReadOnlyStream<int> stream("test_file_read_seek.txt", StreamStrToIntDeser);
-    stream.Open();
     stream.Seek(2);
     
     EXPECT_EQ(stream.Read(), 33) << "Seek вперед в файле должен корректно пропускать токены";
@@ -287,7 +217,6 @@ TEST(FileReadStreamTest, SeekForwardSkipsTokens) {
 TEST(FileReadStreamTest, SeekBackwardRewindsFileStream) {
     CreateStreamFile("test_file_read_rewind.txt", "11 22 33");
     ReadOnlyStream<int> stream("test_file_read_rewind.txt", StreamStrToIntDeser);
-    stream.Open();
     stream.Read();
     stream.Read();
     stream.Seek(0);
@@ -325,7 +254,7 @@ TEST(SeqWriteStreamTest, MultipleWritesUpdateLength) {
 
 TEST(FileWriteStreamTest, WriteAdvancesPositionInFile) {
     WriteOnlyStream<int> stream("test_file_write_data.txt", StreamIntToStrSer);
-    stream.Open();
+    
     stream.Write(52);
     
     EXPECT_EQ(stream.GetPosition(), 1) << "Успешная запись в файл должна увеличивать счетчик позиции";
@@ -333,10 +262,8 @@ TEST(FileWriteStreamTest, WriteAdvancesPositionInFile) {
 
 TEST(FileWriteStreamTest, WritesCorrectDataToDisk) {
     WriteOnlyStream<int> stream("test_file_write_verify.txt", StreamIntToStrSer);
-    stream.Open();
     stream.Write(123);
     stream.Write(456);
-    stream.Close();
 
     std::ifstream in("test_file_write_verify.txt");
     std::string result;
@@ -348,11 +275,9 @@ TEST(FileWriteStreamTest, WritesCorrectDataToDisk) {
 
 TEST(HugeStreamTest, WriteOneMillionElements) {
     WriteOnlyStream<int> stream("huge_test_file.txt", StreamIntToStrSer);
-    stream.Open();
     for (int i = 0; i < 1000000; ++i) {
         stream.Write(i);
     }
-    stream.Close();
     
     std::ifstream in("huge_test_file.txt", std::ios::ate | std::ios::binary);
     bool isLarge = in.tellg() > 1000000;
@@ -369,14 +294,12 @@ TEST(HugeStreamTest, GetPositionFromHugeFileWork) {
     }
     out.close();
     ReadOnlyStream<int> stream("huge_test_file.txt", StreamStrToIntDeser);
-    stream.Open();
     for (int i = 0; i < 500000; ++i) {
         stream.Read();
     }
 
     size_t pos = stream.GetPosition();
 
-    stream.Close();
     std::remove("huge_test_file.txt");
 
     EXPECT_EQ(pos, 500000) << "GetPosition в конце огромного файла";
@@ -389,12 +312,10 @@ TEST(HugeStreamTest, SeekInHugeFileWork) {
     }
     out.close();
     ReadOnlyStream<int> stream("huge_test_file.txt", StreamStrToIntDeser);
-    stream.Open();
 
     stream.Seek(999999);
     int val = stream.Read();
 
-    stream.Close();
     std::remove("huge_test_file.txt");
 
     EXPECT_EQ(val, 999999) << "Seek может считать верное значение с конца огромного файла";
@@ -408,13 +329,11 @@ TEST(HugeStreamTest, SeekBackwardWorkInHugeFile) {
     out.close();
 
     ReadOnlyStream<int> stream("huge_test_file.txt", StreamStrToIntDeser);
-    stream.Open();
 
     stream.Seek(499999);
     stream.Seek(0);
     int val = stream.Read();
 
-    stream.Close();
     std::remove("huge_test_file.txt");
 
     EXPECT_EQ(val, 0) << "Seek может считать верное значение с начала огромного файла, побывав в конце";

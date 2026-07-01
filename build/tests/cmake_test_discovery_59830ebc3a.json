@@ -1,69 +1,7 @@
 {
-  "tests": 163,
+  "tests": 153,
   "name": "AllTests",
   "testsuites": [
-    {
-      "name": "ReadOnlyStreamStateTest",
-      "tests": 5,
-      "testsuite": [
-        {
-          "name": "ReadThrowsWhenClosed",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 28
-        },
-        {
-          "name": "GetPositionThrowsWhenClosed",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 34
-        },
-        {
-          "name": "SeekThrowsWhenClosed",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 40
-        },
-        {
-          "name": "CloseThrowsWhenClosed",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 46
-        },
-        {
-          "name": "DoubleOpenThrowsLogicError",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 52
-        }
-      ]
-    },
-    {
-      "name": "WriteOnlyStreamStateTest",
-      "tests": 5,
-      "testsuite": [
-        {
-          "name": "WriteThrowsWhenClosed",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 60
-        },
-        {
-          "name": "GetPositionThrowsWhenClosedWrite",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 66
-        },
-        {
-          "name": "CloseThrowsWhenClosedWrite",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 72
-        },
-        {
-          "name": "DoubleOpenThrowsLogicErrorWrite",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 78
-        },
-        {
-          "name": "CloseTransitionsStateCorrectlyWrite",
-          "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 85
-        }
-      ]
-    },
     {
       "name": "SeqReadStreamTest",
       "tests": 10,
@@ -71,52 +9,52 @@
         {
           "name": "InitialPositionIsZero",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 94
+          "line": 28
         },
         {
           "name": "ReadReturnsFirstElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 101
+          "line": 35
         },
         {
           "name": "ReadAdvancesPosition",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 108
+          "line": 42
         },
         {
           "name": "ReadReturnsSecondElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 116
+          "line": 50
         },
         {
           "name": "EOFIsTrueAtEnd",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 124
+          "line": 58
         },
         {
           "name": "ReadThrowsEndOfStream",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 132
+          "line": 66
         },
         {
           "name": "SeekUpdatesPositionForward",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 140
+          "line": 74
         },
         {
           "name": "SeekForwardReadsCorrectValue",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 148
+          "line": 82
         },
         {
           "name": "SeekClampsToMaxAvailableIndex",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 156
+          "line": 90
         },
         {
           "name": "SeekBackwardAllowsRereading",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 164
+          "line": 98
         }
       ]
     },
@@ -127,27 +65,27 @@
         {
           "name": "ReadParsesFirstElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 175
+          "line": 109
         },
         {
           "name": "PositionAdvancesInString",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 182
+          "line": 116
         },
         {
           "name": "ReadParsesSecondElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 190
+          "line": 124
         },
         {
           "name": "SeekForwardReadsCorrectToken",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 198
+          "line": 132
         },
         {
           "name": "SeekBackwardRewindsStringStream",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 206
+          "line": 140
         }
       ]
     },
@@ -158,22 +96,22 @@
         {
           "name": "FiniteLazyReachesEOF",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 217
+          "line": 151
         },
         {
           "name": "InfiniteLazyNeverReachesEOF",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 226
+          "line": 160
         },
         {
           "name": "InfiniteLazyGeneratesValues",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 234
+          "line": 168
         },
         {
           "name": "FiniteLazySeekClampsToBound",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 243
+          "line": 177
         }
       ]
     },
@@ -184,27 +122,27 @@
         {
           "name": "ReadFromDiskWorks",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 252
+          "line": 186
         },
         {
           "name": "EOFTriggeredCorrectly",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 260
+          "line": 193
         },
         {
           "name": "ReadThrowsAtEOF",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 269
+          "line": 201
         },
         {
           "name": "SeekForwardSkipsTokens",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 278
+          "line": 209
         },
         {
           "name": "SeekBackwardRewindsFileStream",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 287
+          "line": 217
         }
       ]
     },
@@ -215,17 +153,17 @@
         {
           "name": "WriteAppendsElement",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 299
+          "line": 228
         },
         {
           "name": "WriteAdvancesPosition",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 307
+          "line": 236
         },
         {
           "name": "MultipleWritesUpdateLength",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 315
+          "line": 244
         }
       ]
     },
@@ -236,12 +174,12 @@
         {
           "name": "WriteAdvancesPositionInFile",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 326
+          "line": 255
         },
         {
           "name": "WritesCorrectDataToDisk",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 334
+          "line": 263
         }
       ]
     },
@@ -252,22 +190,22 @@
         {
           "name": "WriteOneMillionElements",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 349
+          "line": 276
         },
         {
           "name": "GetPositionFromHugeFileWork",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 365
+          "line": 290
         },
         {
           "name": "SeekInHugeFileWork",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 385
+          "line": 308
         },
         {
           "name": "SeekBackwardWorkInHugeFile",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 403
+          "line": 324
         }
       ]
     },
@@ -278,12 +216,12 @@
         {
           "name": "IsEndOfStreamAlwaysFalseAfterDeepSeek",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 423
+          "line": 342
         },
         {
           "name": "ReadThrowsNoExceptionsOnExtensiveUsage",
           "file": "C:\\Program1\\my_projects\\my_programs_CPP\\sem2_lab4\\tests\\StreamsTests.cpp",
-          "line": 432
+          "line": 351
         }
       ]
     },

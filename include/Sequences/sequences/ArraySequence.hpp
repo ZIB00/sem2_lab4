@@ -18,6 +18,7 @@ class ArraySequence : public Sequence<T>
 
     protected:
         ArraySequence();
+        void SetArray(size_t count);
         void SetItems(T* items, size_t count);
         void SetItems(std::initializer_list<T> items);
         void CopyItems(const ArraySequence<T>& sequence);
@@ -63,7 +64,7 @@ private:
 public:
     ArraySequenceEnumerator(ArraySequence<T>* sequence);
 
-    T GetCurrent() override;
+    T    Current() override;
     bool MoveNext() override;
     void Reset() override;
 };
@@ -77,6 +78,7 @@ class MutableArraySequence : public ArraySequence<T>
 
     public:
         MutableArraySequence();
+        MutableArraySequence(size_t count);
         MutableArraySequence(T* items, size_t count);
         MutableArraySequence(const MutableArraySequence<T>& sequence);
         MutableArraySequence(std::initializer_list<T> items);
@@ -93,6 +95,7 @@ class ImmutableArraySequence : public ArraySequence<T>
 
     public:
         ImmutableArraySequence();
+        ImmutableArraySequence(size_t count);
         ImmutableArraySequence(T* items, size_t count);
         ImmutableArraySequence(const ImmutableArraySequence<T>& sequence);
         ImmutableArraySequence(std::initializer_list<T> items);
@@ -112,6 +115,14 @@ template<class T>
 ArraySequence<T>::~ArraySequence()
 {
     delete this->items;
+}
+
+template<class T>
+void ArraySequence<T>::SetArray(size_t count)
+{
+    DynamicArray<T>* newItems = new DynamicArray<T>(count);
+    delete this->items;
+    this->items = newItems;
 }
 
 template<class T>
@@ -373,7 +384,7 @@ ArraySequenceEnumerator<T>::ArraySequenceEnumerator(ArraySequence<T>* sequence)
 }
 
 template<class T>
-T ArraySequenceEnumerator<T>::GetCurrent()
+T ArraySequenceEnumerator<T>::Current()
 {
     if (this->position < 0 || this->position >= sequence->GetLength()) throw OutOfRange("Enumerator is out of bounds");
 
@@ -402,6 +413,12 @@ void ArraySequenceEnumerator<T>::Reset()
 
 template<class T>
 MutableArraySequence<T>::MutableArraySequence() {}
+
+template<class T>
+MutableArraySequence<T>::MutableArraySequence(size_t count)
+{
+    this->SetArray(count);
+}
 
 template<class T>
 MutableArraySequence<T>::MutableArraySequence(T* items, size_t count)
@@ -442,6 +459,12 @@ ArraySequence<T>* MutableArraySequence<T>::CreateEmptyMut()
 
 template<class T>
 ImmutableArraySequence<T>::ImmutableArraySequence() {}
+
+template<class T>
+ImmutableArraySequence<T>::ImmutableArraySequence(size_t count)
+{
+    this->SetArray(count);
+}
 
 template<class T>
 ImmutableArraySequence<T>::ImmutableArraySequence(T* items, size_t count)

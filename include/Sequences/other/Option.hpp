@@ -1,7 +1,5 @@
 #pragma once
 
-#include <iostream>
-
 #include "Exceptions.hpp"
 
 template <typename T>

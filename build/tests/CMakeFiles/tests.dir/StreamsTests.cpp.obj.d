@@ -281,8 +281,6 @@ tests/CMakeFiles/tests.dir/StreamsTests.cpp.obj: \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/LinkedList.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Exceptions.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/sequences/Sequence.hpp \
- C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/ICollection.hpp \
- C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerable.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/IEnumerator.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/Sequences/other/Option.hpp \
  C:/Program1/my_projects/my_programs_CPP/sem2_lab4/include/LazySequence/Generator.hpp \
